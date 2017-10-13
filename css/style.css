@@ -634,6 +634,7 @@ footer .box-social .social-icons a {
   width: 100%;
   min-height: 360px;
   text-align: left;
+  text-transform: uppercase;
   background: url('../img/fed_main-bg-form-s.png') no-repeat 50% 100%;
   background-size: contain;
 }
@@ -966,7 +967,7 @@ footer .social_tw {
   --------------------------------------------------------------*/
 
   .footer-right,
-  .footer .contacts-box.phone,
+  footer .contacts-box.phone,
   .footer-center {
     width: 33%;
   }
@@ -1025,4 +1026,9 @@ footer .social_tw {
   /*--------------------------------------------------------------
     # Footer 1600px
   --------------------------------------------------------------*/
+
+  footer .box-production {
+    right: 66%;
+    width: 12%;
+  }
 }
