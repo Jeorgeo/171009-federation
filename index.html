@@ -13,56 +13,62 @@
   </head>
   <body>
     <header class="main-header">
-      <div class="top-header">
-        <div id="js-toggle" class="left-panel__menu-toggle">
-  				<button class="header-menu-toggle"><span>menu</span></button>
-  			</div>
-        <nav class="mobile-menu">
-          <ul>
-            <li>Правила игры</li>
-            <li>Партнеры</li>
-            <li>Стать партнером</li>
-            <li>Заказать игру</li>
-            <li>Контакты</li>
-          </ul>
-        </nav>
-        <div class="logo-box">
-          <img src="img/fed_logo.png" alt="Игра Федерация Логотип">
+      <div class="container">
+        <div class="top-header clearfix">
+          <div class="left-panel">
+            <div id="js-toggle" class="left-panel__menu-toggle">
+              <button class="header-menu-toggle"><span>menu</span></button>
+            </div>
+            <nav class="mobile-menu">
+              <ul>
+                <li>Правила игры</li>
+                <li>Партнеры</li>
+                <li>Стать партнером</li>
+                <li>Заказать игру</li>
+                <li>Контакты</li>
+              </ul>
+            </nav>
+          </div>
+          <div class="logo-box">
+            <img src="img/fed_logo.png" alt="Игра Федерация Логотип">
+          </div>
+          <nav class="main-menu clearfix">
+            <ul>
+              <li>Правила игры</li>
+              <li>Партнеры</li>
+              <li>Стать партнером</li>
+              <li>Заказать игру</li>
+              <li>Контакты</li>
+            </ul>
+          </nav>
+          <div class="contacts-box">
+            <a href="tel:89255107239">
+              <span class="phone_icon"></span>
+              <span class="phone_text">8 (925) 510-72-35</span>
+            </a>
+          </div>
         </div>
-        <nav class="main-menu">
-          <ul>
-            <li>Правила игры</li>
-            <li>Партнеры</li>
-            <li>Стать партнером</li>
-            <li>Заказать игру</li>
-            <li>Контакты</li>
-          </ul>
-        </nav>
-        <div class="contacts-box">
-          <a href="tel:89255107239">
-            <span class="phone_icon"></span>
-            <span class="phone_text">8 (925) 510-72-35</span>
+        <div class="middle-header">
+          <h1>
+            Игра «Федерация»
+          </h1>
+          <p>
+            Мы живем в самой большой стране
+          </p>
+        </div>
+        <div class="bottom-header">
+          <a href="#">
+            <span class="video_text">Смотреть<br> видео</span>
+            <span class="video_btn"></span>
           </a>
         </div>
       </div>
-      <div class="middle-header">
-        <h1>
-          Игра «Федерация»
-        </h1>
-        <p>
-          Мы живем в самой большой стране
-        </p>
-      </div>
-      <div class="bottom-header">
-        <a href="#">Смотреть видео <span></span></a>
-      </div>
       <span class="follow_button">Вниз</span>
     </header>
-    <main>
-      <a name="***"></a>
+    <main class="main">
       <section class="main-intro">
-        <row class="container clearfix">
-          <div class="cols col-4 col-6-md">
+        <div class="row container clearfix">
+          <div class="cols col-4 col-6-md wrap-box">
             <h3>
               Мы любим путешествовать по разным странам и открывать для себя новые города.
             </h3>
@@ -74,13 +80,14 @@
             </p>
           </div>
           <div class="cols col-7 col-6-md">
-            <a href="#">
+            <a class="video_frame" href="#">
               <img src="pics/fed_main-map.jpg" alt="Карта России">
+              <span class="btn-play">play</span>
             </a>
           </div>
-        </row>
-        <row class="container clearfix">
-          <div class="cols col-7 col-6-md">
+        </div>
+        <div class="row container clearfix">
+          <div class="cols col-7 col-6-md wrap-box float_right">
             <p>
               Игра «Федерация» открывает всем, не зависимо от возраста, возможность изучить города и регионы России.
             </p>
@@ -94,148 +101,232 @@
           <div class="cols col-4 col-6-md">
             <img src="pics/fed_main-game.jpg" alt="Игра «Федерация»">
           </div>
-        </row>
-      </section>
-      <a name="***"></a>
-      <section class="main-advantages">
-        <h2>
-          Игра «Федерация»:
-        </h2>
-        <figure>
-          <img src="pics/fed_main-friends.png" alt="Игра «Федерация» Объединяет друзей">
-          <p>Объединяет друзей</p>
-        </figure>
-        <figure>
-          <img src="pics/fed_main-education.png" alt="Игра «Федерация» Развивает и обучает">
-          <p>Развивает и обучает</p>
-        </figure>
-        <figure>
-          <img src="pics/fed_main-community.png" alt="Игра «Федерация» Cтирает границы между поколениями">
-          <p></p>
-        </figure>
-        </section>
-      <a name="***"></a>
-      <section class="main-life">
-        <h2>
-          Жизнь игры
-        </h2>
-        <div class="main-slider">
-          <div class="main-slider__slide">
-            <img src="pics/fed_main-slide1.png" alt="">
-          </div>
-          <div class="main-slider__slide active-slide">
-            <img src="pics/fed_main-slide1.png" alt="">
-          </div>
-          <div class="main-slider__slide">
-            <img src="pics/fed_main-slide1.png" alt="">
-          </div>
         </div>
-        <p>
-          Присоединяйтесь к нам в социальных сетях
-        </p>
-        <div class="box-social">
-          <a href="https://vk.com/id402797950"><span class="social-icons social_vk"></span>В контакте</a>
-          <a href="https://www.instagram.com/rusfedgame"><span class="social-icons social_instagram"></span>Инстаграмм</a>
-          <a href="https://ok.ru/profile/570383914077"><span class="social-icons social_ok"></span>Одноклассники</a>
-          <a href="https://twitter.com/rfigra"><span class="social-icons social_tv"></span>Твиттер</a>
+      </section>
+      <section class="main-advantages">
+        <div class="container">
+          <h2>
+            Игра «Федерация»:
+          </h2>
+          <figure>
+            <img src="pics/fed_main-friends.png" alt="Игра «Федерация» Объединяет друзей">
+            <p>Объединяет друзей</p>
+          </figure>
+          <figure>
+            <img class="central-block" src="pics/fed_main-education.png" alt="Игра «Федерация» Развивает и обучает">
+            <p>Развивает и обучает</p>
+          </figure>
+          <figure>
+            <img class="last-block" src="pics/fed_main-community.png" alt="Игра «Федерация» Cтирает границы между поколениями">
+            <p>Стирает границы между поколениями</p>
+          </figure>
+        </div>
+      </section>
+      <section class="main-life">
+        <div class="container">
+          <h2>
+            Жизнь игры
+          </h2>
+          <div class="main-slider">
+            <div class="main-slider__slide hidden-slide">
+              <img src="pics/fed_main-slide1.png" alt="">
+            </div>
+            <div class="main-slider__slide active-slide">
+              <img src="pics/fed_main-slide1.png" alt="">
+            </div>
+            <div class="main-slider__slide hidden-slide">
+              <img src="pics/fed_main-slide1.png" alt="">
+            </div>
+            <span class="main-slider__btn btn-prev"></span>
+            <span class="main-slider__btn btn-next"></span>
+
+          </div>
+          <p>
+            Присоединяйтесь к нам в социальных сетях
+          </p>
+          <div class="box-social">
+            <span class="social-icons social_vk"><a href="https://vk.com/id402797950">В контакте</a></span>
+            <span class="social-icons social_instagram"><a href="https://www.instagram.com/rusfedgame">Инстаграмм</a></span>
+            <span class="social-icons social_ok"><a href="https://ok.ru/profile/570383914077">Одноклассники</a></span>
+            <span class="social-icons social_tw"><a href="https://twitter.com/rfigra">Твиттер</a></span>
+          </div>
         </div>
       </section>
       <section class="main-steps">
-        <figure class="main-step step-1">
-          <img src="img/fed_main-icon-process1.png" alt="">
-          <p>
-            Каждой клетке с названием региона соответствует карта с названием его административного центра (города
-          </p>
-          <span>1</span>
-        </figure>
-        <figure class="main-step step-2">
-          <img src="img/fed_main-icon-process2.png" alt="">
-          <p>
-            У каждого игрока на руках фишки и 6 карт. Когда подходит его очередь, игрок открывает одну из своих карт
-          </p>
-          <span>2</span>
-        </figure>
-        <figure class="main-step step-3">
-          <img src="img/fed_main-icon-process3.png" alt="">
-          <p>
-            Открыв карту с названием города, игрок ставит фишку на клетку с соответствующим регионом на поле.  Открытая карта сбрасывается.
-          </p>
-          <span>3</span>
-        </figure>
-        <figure class="main-step step-4">
-          <img src="img/fed_main-icon-process4.png" alt="">
-          <p>
-            Затем игрок берет новую карту из общей колоды, взамен сброшенной, после чего ход переходит к следующему игроку.
-          </p>
-          <span>4</span>
-        </figure>
-        <figure class="main-step step-5">
-          <img src="img/fed_main-icon-process5.png" alt="">
-          <p>
-            По ходу игры поле заполняется фишками разных цветов. Ряд из шести фишек одного цвета называется суперлинией.
-          </p>
-          <span>5</span>
-        </figure>
-        <figure class="main-step victory">
-          <img src="pics/fed_main-victory.png" alt="">
-          <p>
-            Побеждает та команда или игрок, которые первыми построили три суперлинии.
-          </p>
-        </figure>
+        <div class="container">
+          <h2>Ход игры</h2>
+          <div class="mobile-version">
+            <figure class="main-step step-1">
+              <img src="img/fed_main-icon-process1.png" alt="">
+              <p>
+                Каждой клетке с названием региона соответствует карта с названием его административного центра (города
+              </p>
+              <span>1</span>
+            </figure>
+            <figure class="main-step step-2">
+              <img src="img/fed_main-icon-process2.png" alt="">
+              <p>
+                У каждого игрока на руках фишки и 6 карт. Когда подходит его очередь, игрок открывает одну из своих карт
+              </p>
+              <span>2</span>
+            </figure>
+            <figure class="main-step step-3">
+              <img src="img/fed_main-icon-process3.png" alt="">
+              <p>
+                Открыв карту с названием города, игрок ставит фишку на клетку с соответствующим регионом на поле.  Открытая карта сбрасывается.
+              </p>
+              <span>3</span>
+            </figure>
+            <figure class="main-step step-4">
+              <img src="img/fed_main-icon-process4.png" alt="">
+              <p>
+                Затем игрок берет новую карту из общей колоды, взамен сброшенной, после чего ход переходит к следующему игроку.
+              </p>
+              <span>4</span>
+            </figure>
+            <figure class="main-step step-5">
+              <img src="img/fed_main-icon-process5.png" alt="">
+              <p>
+                По ходу игры поле заполняется фишками разных цветов. Ряд из шести фишек одного цвета называется суперлинией.
+              </p>
+              <span>5</span>
+            </figure>
+            <figure class="main-step victory">
+              <img src="pics/fed_main-victory.png" alt="">
+              <p>
+                Побеждает та команда или игрок, которые первыми построили три суперлинии.
+              </p>
+            </figure>
+          </div>
+          <div class="pc-version">
+            <div class="row clearfix">
+              <div class="cols col-4">
+                <figure class="main-step step-2">
+                  <img src="img/fed_main-icon-process2.png" alt="">
+                  <p>
+                    У каждого игрока на руках фишки и 6 карт. Когда подходит его очередь, игрок открывает одну из своих карт
+                  </p>
+                  <span>2</span>
+                </figure>
+                <figure class="main-step step-1">
+                  <img src="img/fed_main-icon-process1.png" alt="">
+                  <p>
+                    Каждой клетке с названием региона соответствует карта с названием его административного центра (города
+                  </p>
+                  <span>1</span>
+                </figure>
+              </div>
+              <div class="cols col-4">
+                <figure class="main-step step-3">
+                  <img src="img/fed_main-icon-process3.png" alt="">
+                  <p>
+                    Открыв карту с названием города, игрок ставит фишку на клетку с соответствующим регионом на поле.  Открытая карта сбрасывается.
+                  </p>
+                  <span>3</span>
+                </figure>
+                <figure class="main-step victory">
+                  <img src="pics/fed_main-victory.png" alt="">
+                  <p>
+                    Побеждает та команда или игрок, которые первыми построили три суперлинии.
+                  </p>
+                </figure>
+              </div>
+              <div class="cols col-4">
+                <figure class="main-step step-4">
+                  <img src="img/fed_main-icon-process4.png" alt="">
+                  <p>
+                    Затем игрок берет новую карту из общей колоды, взамен сброшенной, после чего ход переходит к следующему игроку.
+                  </p>
+                  <span>4</span>
+                </figure>
+                <figure class="main-step step-5">
+                  <img src="img/fed_main-icon-process5.png" alt="">
+                  <p>
+                    По ходу игры поле заполняется фишками разных цветов. Ряд из шести фишек одного цвета называется суперлинией.
+                  </p>
+                  <span>5</span>
+                </figure>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+      <section class="rules">
+        <div class="container row clearfix">
+          <div class="cols col-4 col-6-md wrap-box">
+            <img class="hidden-block_768" src="pics/fed_main-rules.jpg" alt="Правила игры">
+            <a class="btn-rules" href="#">Правила игры</a>
+          </div>
+          <div class="cols col-7 col-6-md">
+            <a class="video_frame" href="#">
+              <img src="pics/fed_main-video.jpg" alt="Правила игры">
+              <span class="btn-play">play</span>
+            </a>
+          </div>
+        </div>
       </section>
       <section class="main-order">
-        <p><span class="big-text">
-          Где бы Вы ни были, в любой точке нашей необъятной Родины, мы позаботимся, чтобы игра оказалась у Вас в идеальном состоянии.  Стоимость доставки мы берём на себя.
-        </span></p>
-        <div class="box-form">
-          <form class="" action="index.html" method="post">
-            <h4>
-              Оформить заказ
-            </h4>
-            <input type="text" name="name" value="" placeholder="ФИО*">
-            <input type="text" name="phone" value="" placeholder="Контактный телефон*">
-            <input type="text" name="email" value="" placeholder="E-mail*">
-            <input type="text" name="adress" value="" placeholder="Адрес доставки*">
-            <span class="price">
-              Всего: 1690 руб.
-            </span>
-            <button class="box-form__btn"type="submit" name="order-btn">Перейти к оплате</button>
-          </form>
+        <div class="container">
+          <div class="row clearfix">
+            <div class="cols col-5 col-6-md wrap-box">
+              <p class="box-meet">
+                <span class="big-text">
+                  Где бы Вы ни были, в любой точке нашей необъятной Родины, мы позаботимся, чтобы игра оказалась у Вас в идеальном состоянии.  Стоимость доставки мы берём на себя.
+                </span>
+              </p>
+            </div>
+            <div class="cols col-5 col-6-md">
+              <div class="box-form">
+                <form class="main-form" action="index.html" method="post">
+                  <h4>
+                    Оформить заказ
+                  </h4>
+                  <input type="text" name="name" value="" placeholder="ФИО*">
+                  <input type="text" name="phone" value="" placeholder="Контактный телефон*">
+                  <input type="text" name="email" value="" placeholder="E-mail*">
+                  <input type="text" name="adress" value="" placeholder="Адрес доставки*">
+                  <span class="price">
+                    Всего: 1690 руб.
+                  </span>
+                  <button class="box-form__btn"type="submit" name="order-btn">Перейти к оплате</button>
+                </form>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>
     <footer>
-      <div class="contacts-box">
-        <a href="tel:89255107239">
-          <span class="phone_icon"></span>
-          <span class="phone_text">8 (925) 510-72-35</span>
-        </a>
-      </div>
-      <div class="footer-center">
-        <div class="box-social">
-          <a href="https://vk.com/id402797950"><span class="social-icons social_vk"></span>В контакте</a>
-          <a href="https://www.instagram.com/rusfedgame"><span class="social-icons social_instagram"></span>Инстаграмм</a>
-          <a href="https://ok.ru/profile/570383914077"><span class="social-icons social_ok"></span>Одноклассники</a>
-          <a href="https://twitter.com/rfigra"><span class="social-icons social_tv"></span>Твиттер</a>
-        </div>
-        <div class="box-production">
-          <p>
-            Создание сайта: <a href="http://ws-sputnik.ru/">ws-sputnik.ru</a>
-          </p>
-        </div>
-      </div>
-      <div class="footer-right">
-        <div class="contacts-box">
-          <a href="mailto:igra@gmail.com">
-            <span class="mail_icon"></span>
-            <span class="mail_text">igra@gmail.com</span>
+      <div class="container clearfix">
+        <div class="contacts-box phone">
+          <a href="tel:89255107239">
+            <span class="phone_icon"></span>
+            <span class="phone_text">8 (925) 510-72-35</span>
           </a>
         </div>
-        <a href="#">Политика конфиденциальности</a>
-      </div>
-      <div class="box-copy">
-        <p>
-          © Игра «Федерация», 2017
+        <div class="footer-right">
+          <div class="contacts-box">
+            <a href="mailto:igra@gmail.com">
+              <span class="mail_icon"></span>
+              <span class="mail_text">igra@gmail.com</span>
+            </a>
+          </div>
+          <a class="policy" href="#">Политика конфиденциальности</a>
+        </div>
+        <div class="footer-center">
+          <div class="box-social">
+            <span class="social-icons social_vk"><a href="https://vk.com/id402797950">В контакте</a></span>
+            <span class="social-icons social_instagram"><a href="https://www.instagram.com/rusfedgame">Инстаграмм</a></span>
+            <span class="social-icons social_ok"><a href="https://ok.ru/profile/570383914077">Одноклассники</a></span>
+            <span class="social-icons social_tw"><a href="https://twitter.com/rfigra">Твиттер</a></span>
+          </div>
+          <p class="box-copy">
+            © Игра «Федерация», 2017
+          </p>
+        </div>
+        <p class="box-production">
+          Создание сайта: <a href="http://ws-sputnik.ru/">ws-sputnik.ru</a>
         </p>
       </div>
     </footer>

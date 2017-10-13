@@ -18,18 +18,13 @@
 --------------------------------------------------------------*/
 
 @font-face {
-  font-family: 'OpenSans'; /* Гарнитура шрифта */
-  src: url( "fonts/OpenSans-Regular.ttf" ); /* Путь к файлу со шрифтом */
+  font-family: 'PT Sans'; /* Гарнитура шрифта */
+  src: url( "fonts/PT_Sans-Web-Regular.ttf" ); /* Путь к файлу со шрифтом */
 }
 
 @font-face {
-   font-family: 'OpenSansExtraBold'; /* Гарнитура шрифта */
-   src: url( "fonts/OpenSans-ExtraBold.ttf" ); /* Путь к файлу со шрифтом */
-  }
-
-@font-face {
-   font-family: 'OpenSansSemibold'; /* Гарнитура шрифта */
-   src: url( "fonts/OpenSans-Semibold.ttf" ); /* Путь к файлу со шрифтом */
+   font-family: 'PT Sans Bold'; /* Гарнитура шрифта */
+   src: url( "fonts/PT_Sans-Web-Bold.ttf" ); /* Путь к файлу со шрифтом */
   }
 
 
@@ -67,6 +62,50 @@
   to   { transform: rotate(0deg); }
 }
 
+@keyframes swell {
+  from { width: 98%;
+  box-shadow: 0 0 0 0 #404040; }
+  to   { width: 100%;
+  box-shadow: 0 0 3px 1px #404040; }
+}
+
+@keyframes deflate {
+  from { width: 100%;
+  box-shadow: 0 0 3px 1px #404040; }
+  to   { width: 98%;
+  box-shadow: 0 0 0 0 #404040; }
+}
+
+@keyframes swell-r {
+  from { width: 85%; }
+  to   { width: 100%; }
+}
+
+@keyframes deflate-r {
+  from { width: 100%; }
+  to   { width: 85%; }
+}
+
+@keyframes rotate-up1 {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(-180deg); }
+}
+
+@keyframes prerotate-up1 {
+  from { transform: rotate(-180deg); }
+  to   { transform: rotate(0deg); }
+}
+
+@keyframes show-popup {
+  from { opacity: 0;}
+  to   { opacity: 1; }
+}
+
+@keyframes hide-popup {
+  from { opacity: 1;}
+  to   { opacity: 0; }
+}
+
 
 /*--------------------------------------------------------------
 # Typography
@@ -79,18 +118,10 @@ html, body {
 	height: 100%;
 	min-width: 100%;
 	min-height: 100%;
-	font-family: 'OpenSans', sans-serif;
-  color: #404040;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	font-size: 1em;
-  font-family: 'OpenSansSemibold', serif;
+  font-size: 1.1em;
+	font-family: 'PT Sans', sans-serif;
+  color: #000000;
+  background: #f8f8ff;
 }
 
 ul {
@@ -108,10 +139,10 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+  margin: auto;
 }
 
 .container {
-  max-width: 300px;
   width: 100%;
   margin: 0 auto;
 }
@@ -143,7 +174,7 @@ img {
 }
 
 .color-text {
-  color: #e93a1d;
+
 }
 
 @media (min-width: 768px) {
@@ -156,46 +187,8 @@ img {
     margin: 1em 0;
   }
 
-  .cols.col-1 {
-    width: 24.9999%;
-  }
-
-  .cols.col-2 {
-    width: 33.3332%;
-  }
-
-  .cols.col-3 {
-    width: 41.6665%;
-  }
-
-  .cols.col-4 {
-    width: 49.9998%;
-  }
-
-  .cols.col-5 {
-    width: 58.3331%;
-  }
-
-  .cols.col-6 {
-    width: 66.6664%;
-  }
-
-  .cols.col-7 {
-    width: 74.9997%;
-  }
-
-  .cols.col-8 {
-    width: 83.333%;
-  }
-
-  .cols.col-9 {
-    width: 91.663%;
-  }
-
-  .cols.col-10,
-  .cols.col-11,
-  .cols.col-12 {
-    width: 100%;
+  .float_right{
+    float: right;
   }
 }
 
@@ -251,6 +244,7 @@ img {
   .cols.col-12 {
     width: 100%;
   }
+
 }
 
 @media (min-width: 1200px) {
@@ -263,113 +257,772 @@ img {
 # Header
 --------------------------------------------------------------*/
 
-/*============== for tablets 768px ===========================*/
-@media screen and (min-width: 768px) {
-
+.main-header {
+  padding-bottom: 2em;
+  background: url('../img/header-bg.png') no-repeat 50% 50%;
+  background-size: cover;
 }
 
-/*============== for tablets 1024px ===========================*/
-@media screen and (min-width: 1024px) {
-
+.top-header {
+  position: relative;
 }
 
-/*=================== for PC 1280px ===========================*/
-@media screen and (min-width: 1280px) {
-
+.main-menu {
+  display: none;
 }
 
-/*=================== for PC 1360px ===========================*/
-@media screen and (min-width: 1360px) {
-
+.logo-box {
+  width: 55px;
+  margin: 0 auto;
 }
 
-/*=================== for MAC 1600px ===========================*/
-@media screen and (min-width: 1600px) {
+.main-header .contacts-box {
+  position: absolute;
+  top: 5px;
+  right: 0;
+}
 
+.main-header .contacts-box .phone_icon {
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: url('../img/fed_main-icon-phone.png') no-repeat 50% 50%;
+  background-size: contain;
+}
+
+.main-header .contacts-box .phone_text {
+  display: none;
+}
+
+.middle-header {
+  margin: 2.5em 0;
+}
+
+.middle-header h1,
+.middle-header p  {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.middle-header p {
+  font-size: 1.4em;
+}
+
+.bottom-header {
+  width: 100%;
+  text-align: center;
+  color: #ffffff;
+}
+
+.bottom-header a .video_text {
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: 6px;
+  margin-right: 10px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.bottom-header a .video_btn {
+  display: inline-block;
+  vertical-align: top;
+  width: 60px;
+  height: 60px;
+  background: url('../img/fed_main-btn-video1.png') no-repeat 50% 50%;
+  background-size: contain;
+}
+
+.follow_button {
+  display: none;
 }
 
 
 /*--------------------------------------------------------------
-# Sidebar
+# Header
+  ## Header mobile menu
 --------------------------------------------------------------*/
-/*============== for tablets 768px ===========================*/
-@media screen and (min-width: 768px) {
 
+.box-menu-toggle {
+  position: relative;
 }
 
-/*============== for tablets 1024px ===========================*/
+.left-panel {
+  position: absolute;
+  width: 70%;
+  left: -60%;
+}
+
+.left-panel__menu-toggle {
+  position: absolute;
+  top: 1px;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  margin: 0;
+  padding: 3px;
+  font-size: 0;
+}
+
+.header-menu-toggle {
+  position: relative;
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin: 3px;
+  background-color: transparent;
+  border: none;
+}
+
+.header-menu-toggle span {
+  position: absolute;
+  display: block;
+  width: 30px;
+  top: 8px;
+  left: 2px;
+  height: 2px;
+  background-color: #ffd09c;
+  font-size: 0;
+}
+
+.header-menu-toggle span::before,
+.header-menu-toggle span::after {
+  position: absolute;
+  display: block;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ffd09c;
+  content: "";
+}
+
+.header-menu-toggle span::before {
+  top: -6px;
+  transform: rotate(-45deg);
+  animation-name: prerotate-up;
+  animation-duration: 0.8s;
+  transform: rotate(0deg);
+}
+
+.header-menu-toggle span::after {
+  bottom: -6px;
+  transform: rotate(45deg);
+  animation-name: prerotate-bottom;
+  animation-duration: 0.8s;
+  transform: rotate(0deg);
+}
+
+.left-panel__menu-toggle:active {
+  background-color: #000000;
+  box-shadow: 1px 1px 2px 2px #363636;
+}
+
+.nav-show {
+  display: block;
+  animation-name: show-panel;
+  animation-duration: 0.5s;
+  left: 0;
+}
+
+.header-menu-toggle.btn-arrow-top span::before  {
+  animation-name: rotate-up;
+  animation-duration: 0.8s;
+  transform: rotate(-45deg);
+}
+
+.header-menu-toggle.btn-arrow-bottom span::after {
+  animation-name: rotate-bottom;
+  animation-duration: 0.8s;
+  transform: rotate(45deg);
+}
+
 @media screen and (min-width: 1024px) {
-
-}
-
-/*=================== for PC 1280px ===========================*/
-@media screen and (min-width: 1280px) {
-
-}
-
-/*=================== for PC 1360px ===========================*/
-@media screen and (min-width: 1360px) {
-
-}
-
-/*=================== for MAC 1600px ===========================*/
-@media screen and (min-width: 1600px) {
-
+  .left-panel__menu-toggle {
+    display: none;
+  }
 }
 
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
-/*============== for tablets 768px ===========================*/
-@media screen and (min-width: 768px) {
-
+.main {
+  text-align: center;
 }
 
-/*============== for tablets 1024px ===========================*/
-@media screen and (min-width: 1024px) {
-
+.hidden-block_768 {
+  display: none;
 }
 
-/*=================== for PC 1280px ===========================*/
-@media screen and (min-width: 1280px) {
-
+.main .wrap-box,
+.main-steps .container {
+  width: 90%;
 }
 
-/*=================== for PC 1360px ===========================*/
-@media screen and (min-width: 1360px) {
-
+.main h2,
+.main h4 {
+  text-transform: uppercase;
+  font-size: 32px;
+  font-weight: bold;
+  font-family: 'PT Sans', 'Arial', sans-serif;
+  color: #3a75c4;
 }
 
-/*=================== for MAC 1600px ===========================*/
-@media screen and (min-width: 1600px) {
+.main h3,
+.big-text {
+  font-size: 1.2em;
+  font-weight: bold;
+  font-family: 'PT Sans', 'Arial', sans-serif;
+}
 
+.main-advantages p {
+  margin-bottom: 2em;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.main-slider {
+  position: relative;
+}
+
+.main-slider .hidden-slide {
+  display: none;
+}
+
+.main-slider__btn {
+  position: relative;
+  display: inline-block;
+  width: 46px;
+  height: 46px;
+  margin: 1em 0.5em;
+  border: 1px solid #ffd09c;
+  border-radius: 50%;
+}
+
+.main-slider__btn::after,
+.main-slider__btn::before {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: #ffd09c;
+  content: '';
+}
+
+.main-slider__btn::after {
+  transform: rotate(45deg);
+}
+
+.main-slider__btn::before {
+  transform: rotate(-45deg);
+    top: 28px;
+}
+
+.main-slider__btn.btn-prev {
+  transform: rotate(-180deg);
+}
+
+.main-life {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.main-life .box-social {
+  margin-bottom: 3em;
+}
+
+.main-life .box-social .social-icons,
+footer .box-social .social-icons {
+  display: inline-block;
+  width: 46px;
+  height: 46px;
+  margin: 0 10px;
+  font-size: 0;
+}
+
+.main-life .box-social .social-icons a,
+footer .box-social .social-icons a {
+  display: block;
+  width: 46px;
+  height: 46px;
+}
+
+.main-life .social_vk {
+  background: url('../img/fed_icon-main-vk.png') no-repeat 50% 50%;
+  background-size: contain;
+}
+
+.main-life .social_instagram {
+  background: url('../img/fed_icon-main-ins.png') no-repeat 50% 50%;
+  background-size: contain;
+}
+
+.main-life .social_ok {
+  background: url('../img/fed_icon-main-ok.png') no-repeat 50% 50%;
+  background-size: contain;
+}
+
+.main-life .social_tw {
+  background: url('../img/fed_icon-main-tw.png') no-repeat 50% 50%;
+  background-size: contain;
+}
+
+.main-step {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 1.5em 0;
+}
+
+.main-step img {
+  max-width: 50%;
+  margin: 3em auto 2em auto;
+}
+
+.main-step p {
+  font-size: 0.9em;
+}
+
+.main-step span {
+  position: absolute;
+  bottom: -30px;
+  left: 0;
+  font-family: 'Arial', serif;
+  font-size: 150px;
+  font-weight: bold;
+  opacity: 0.1;
+  color: #3976c4;
+}
+
+.main-step.victory p {
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+.btn-rules {
+  display: block;
+  margin: 2em auto;
+  padding: 1em;
+  font-size: 1.2em;
+  color: #3b76c4;
+  border: 2px solid #3b76c4;
+}
+
+.video_frame {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+.btn-play {
+  position: absolute;
+  top: 42%;
+  left: 40%;
+  display: block;
+  width: 15%;
+  height: 15%;
+  font-size: 0;
+  background: url('../img/fed_main-btn-video2.png') no-repeat 50% 50%;
+  background-size: contain;
+}
+
+.box-meet {
+  display: block;
+  width: 100%;
+  min-height: 360px;
+  text-align: left;
+  background: url('../img/fed_main-bg-form-s.png') no-repeat 50% 100%;
+  background-size: contain;
+}
+
+.box-form {
+  padding: 0.5em 0 1em 0;
+  background-color: #fefeff;
+  box-sizing: border-box;
+}
+
+.box-form input {
+  display: block;
+  width: 70%;
+  margin: 1em auto;
+  padding: 0.5em 1em;
+  color: #908f94;
+  border: none;
+  border-bottom: 1px solid #908f94;
+}
+
+.box-form .price,
+.box-form button {
+  display: block;
+  width: 80%;
+  margin: 1em auto;
+  text-align: center;
+}
+
+.box-form .price {
+  font-size: 1.4em;
+  font-weight: bold;
+  color: #3a75c4;
+}
+
+.box-form button {
+  padding: 1em;
+  color: #ffffff;
+  background-color: #ff4040;
+  border: 1px solid #908f94;
+}
+
+.main-steps .pc-version {
+  display: block;
 }
 
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
 
+footer {
+  padding: 1em 0;
+  text-align: center;
+  color: #ffd09c;
+  background-color: #2683ca;
+}
+
+footer .contacts-box {
+  margin: 1em 0;
+}
+
+footer .contacts-box .phone_icon,
+footer .contacts-box .mail_icon {
+  display: inline-block;
+  vertical-align: top;
+  width: 30px;
+  height: 30px;
+  background: url('../img/fed_main-icon-phone.png') no-repeat 50% 50%;
+  background-size: contain;
+}
+
+footer .contacts-box .mail_icon {
+  background: url('../img/fed_main-icon-mail.png') no-repeat 50% 50%;
+  background-size: contain;
+}
+
+footer .contacts-box .phone_text,
+footer .contacts-box .mail_text {
+  display: inline-block;
+  vertical-align: top;
+  padding-bottom: 3px;
+  font-size: 27px;
+  font-weight: bold;
+}
+
+footer .contacts-box .mail_text {
+  margin-left: 15px;
+}
+
+footer .social_vk {
+  background: url('../img/fed_icon-header-vk.png') no-repeat 50% 50%;
+  background-size: contain;
+}
+
+footer .social_instagram {
+  background: url('../img/fed_icon-header-ins.png') no-repeat 50% 50%;
+  background-size: contain;
+}
+
+footer .social_ok {
+  background: url('../img/fed_icon-header-ok.png') no-repeat 50% 50%;
+  background-size: contain;
+}
+
+footer .social_tw {
+  background: url('../img/fed_icon-header-tw.png') no-repeat 50% 50%;
+  background-size: contain;
+}
+
+.footer-right .policy,
+.box-production {
+  font-size: 0.8em;
+}
+
+.footer-right .policy,
+.box-production a {
+  text-decoration: underline;
+}
+
+
+
 /*============== for tablets 768px ===========================*/
 @media screen and (min-width: 768px) {
 
+/*--------------------------------------------------------------
+  # Header 768px
+--------------------------------------------------------------*/
+  .cols.col-6-md {
+    width: 50%;
+    padding: 0 2%;
+  }
+
+/*--------------------------------------------------------------
+  # Content 768px
+--------------------------------------------------------------*/
+
+  .main-step {
+    display: inline-block;
+    vertical-align: top;
+    width: 48%;
+  }
+
+  .main-advantages figure {
+    display: inline-block;
+    vertical-align: top;
+    width: 37%;
+  }
+
+  .main-advantages figure .central-block {
+    max-width: 67%;
+  }
+
+  .main-slider__btn {
+    position: absolute;
+    top: 37%;
+  }
+
+  .main-slider__btn.btn-prev {
+    left: -20px;
+  }
+
+  .main-slider__btn.btn-next {
+    right: -20px;
+  }
+
+  .hidden-block_768 {
+    display: block;
+  }
+
+  .rules .video_frame {
+    margin-top: 3.5em;
+  }
+
+  .main-order {
+    padding-bottom: 2em;
+  }
+
+  .main-order .container {
+    background: url('../img/fed_main-bg-form.png') no-repeat 50% 100%;
+    background-size: contain;
+  }
+
+  .main-order .box-meet {
+    background: none;
+    min-height: 4em;
+  }
+
+  .main-order .box-form {
+    background: rgba(255, 255, 255, 0.85);
+  }
+
+/*--------------------------------------------------------------
+  # Footer 768px
+--------------------------------------------------------------*/
+  footer {
+    position: relative;
+  }
+
+  footer .contacts-box.phone,
+  .footer-center {
+    float: left;
+    width: 50%;
+  }
+
+  .footer-right {
+    float: right;
+    width: 50%;
+  }
+
+  footer .box-production {
+    position: absolute;
+    bottom: 10%;
+    right: 5%;
+    width: 50%;
+  }
 }
 
 /*============== for tablets 1024px ===========================*/
 @media screen and (min-width: 1024px) {
+  /*--------------------------------------------------------------
+    # Header 1024px
+  --------------------------------------------------------------*/
+  .logo-box {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0;
+    margin-right: 1em;
+  }
 
+  .main-header {
+    min-height: 620px;
+  }
+
+  .middle-header {
+    margin: 10em 0;
+  }
+
+  .middle-header h1,
+  .middle-header p {
+    font-size: 2.5em;
+  }
+
+  .middle-header p {
+    font-size: 2em;
+  }
+
+  .main-menu {
+    display: inline-block;
+    vertical-align: top;
+    color: #ffd09c;
+  }
+
+  .main-menu ul,
+  .main-menu li {
+    float: left;
+  }
+
+  .main-menu li {
+    margin: 20px 2em;
+    font-size: 0.95em;
+  }
+
+  .main-header .contacts-box {
+    position: static;
+    display: inline-block;
+    vertical-align: top;
+    margin: 20px 0;
+  }
+
+  .main-header .contacts-box .phone_icon {
+    display: none;
+  }
+
+  .main-header .contacts-box .phone_text {
+    display: block;
+    color: #ffd09c;
+    font-weight: bold;
+    font-size: 1.1em;
+    margin: -1px 0;
+  }
+
+  .bottom-header {
+    text-align: right;
+  }
+
+  /*--------------------------------------------------------------
+    # Content 1024px
+  --------------------------------------------------------------*/
+
+  .main-intro {
+    text-align: left;
+  }
+
+  .row {
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+
+  .row h3 {
+    margin-top: 0;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  .main-advantages figure {
+    width: 25%;
+  }
+
+  .main-advantages .last-block {
+    width: 85%;
+  }
+
+
+  .main-steps .mobile-version {
+    display: none;
+  }
+
+  .main-steps .pc-version {
+    display: block;
+  }
+
+  .main-step {
+    width: 90%;
+    margin: auto;
+  }
+
+  /*--------------------------------------------------------------
+    # Footer 1024px
+  --------------------------------------------------------------*/
+
+  .footer-right,
+  .footer .contacts-box.phone,
+  .footer-center {
+    width: 33%;
+  }
+
+  footer .box-production {
+    position: absolute;
+    bottom: 20%;
+    right: 66%;
+    width: 33%;
+  }
 }
 
 /*=================== for PC 1280px ===========================*/
 @media screen and (min-width: 1280px) {
+  /*--------------------------------------------------------------
+    # Header 1280px
+  --------------------------------------------------------------*/
 
+
+  /*--------------------------------------------------------------
+    # Content 1280px
+  --------------------------------------------------------------*/
+
+  /*--------------------------------------------------------------
+    # Footer 1280px
+  --------------------------------------------------------------*/
 }
 
 /*=================== for PC 1360px ===========================*/
 @media screen and (min-width: 1360px) {
+  /*--------------------------------------------------------------
+    # Header 1360px
+  --------------------------------------------------------------*/
 
+
+  /*--------------------------------------------------------------
+    # Content 1360px
+  --------------------------------------------------------------*/
+
+  /*--------------------------------------------------------------
+    # Footer 1360px
+  --------------------------------------------------------------*/
 }
 
 /*=================== for MAC 1600px ===========================*/
 @media screen and (min-width: 1600px) {
+  /*--------------------------------------------------------------
+    # Header 1600px
+  --------------------------------------------------------------*/
 
+
+  /*--------------------------------------------------------------
+    # Content 1600px
+  --------------------------------------------------------------*/
+
+  /*--------------------------------------------------------------
+    # Footer 1600px
+  --------------------------------------------------------------*/
 }
