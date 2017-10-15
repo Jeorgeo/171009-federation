@@ -799,6 +799,10 @@ footer .social_tw {
     right: -20px;
   }
 
+  .btn-rules {
+    width: 76%;
+  }
+
   .hidden-block_768 {
     display: block;
   }
@@ -828,7 +832,7 @@ footer .social_tw {
 /*--------------------------------------------------------------
   # Footer 768px
 --------------------------------------------------------------*/
-  footer {
+  footer .container {
     position: relative;
   }
 
@@ -846,7 +850,7 @@ footer .social_tw {
   footer .box-production {
     position: absolute;
     bottom: 10%;
-    right: 5%;
+    right: 0;
     width: 50%;
   }
 }
@@ -974,9 +978,10 @@ footer .social_tw {
 
   footer .box-production {
     position: absolute;
-    bottom: 20%;
-    right: 66%;
-    width: 33%;
+    bottom: 22%;
+    right: 65%;
+    width: 35%;
+    margin: 0;
   }
 }
 
@@ -1027,8 +1032,4 @@ footer .social_tw {
     # Footer 1600px
   --------------------------------------------------------------*/
 
-  footer .box-production {
-    right: 66%;
-    width: 12%;
-  }
 }
