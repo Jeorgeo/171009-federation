@@ -257,6 +257,11 @@ img {
 # Header
 --------------------------------------------------------------*/
 
+header .container,
+footer .container {
+  width: 90%;
+}
+
 .main-header {
   padding-bottom: 2em;
   background: url('../img/header-bg.png') no-repeat 50% 50%;
@@ -276,13 +281,13 @@ img {
   margin: 0 auto;
 }
 
-.main-header .contacts-box {
+header .contacts-box {
   position: absolute;
   top: 5px;
   right: 0;
 }
 
-.main-header .contacts-box .phone_icon {
+header .contacts-box .phone_icon {
   display: block;
   width: 30px;
   height: 30px;
@@ -290,7 +295,7 @@ img {
   background-size: contain;
 }
 
-.main-header .contacts-box .phone_text {
+header .contacts-box .phone_text {
   display: none;
 }
 
@@ -609,6 +614,7 @@ footer .box-social .social-icons a {
   font-size: 1.2em;
   color: #3b76c4;
   border: 2px solid #3b76c4;
+  box-sizing: border-box;
 }
 
 .video_frame {
@@ -678,6 +684,35 @@ footer .box-social .social-icons a {
 
 .main-steps .pc-version {
   display: block;
+}
+
+.rules-items .text-box,
+.rules .btn-rules {
+  width: 90%;
+}
+
+.rules .btn-rules {
+  max-width: 360px;
+}
+
+.rules .container h2,
+.rules .container h3,
+.rules .container h5 {
+  text-align: center;
+}
+
+.rules figure {
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+  margin: 1em 0;
+  text-align: center;
+}
+
+.rules p {
+  display: block;
+  width: 90%;
+  margin: 0 auto 1em auto;
 }
 
 /*--------------------------------------------------------------
@@ -753,8 +788,6 @@ footer .social_tw {
   text-decoration: underline;
 }
 
-
-
 /*============== for tablets 768px ===========================*/
 @media screen and (min-width: 768px) {
 
@@ -807,7 +840,7 @@ footer .social_tw {
     display: block;
   }
 
-  .rules .video_frame {
+  .main-rules .video_frame {
     margin-top: 3.5em;
   }
 
@@ -827,6 +860,28 @@ footer .social_tw {
 
   .main-order .box-form {
     background: rgba(255, 255, 255, 0.85);
+  }
+
+
+  .rules-items .text-box {
+    width: 100%;
+    padding: 1.5em 0.5em;
+    background-color: #ffffff;
+    box-shadow: 0 0 5px 4px rgba(0, 0, 0, 0.15);
+    box-sizing: border-box;
+  }
+
+  .rules-items figure {
+    margin-top: -1em;
+    margin-bottom: 2em;
+  }
+
+  .rules-items figure img {
+    box-shadow: 0 0 50px 10px rgba(0, 0, 0, 0.35);
+  }
+
+  .rules-items h5 {
+    margin-top: 0;
   }
 
 /*--------------------------------------------------------------
@@ -900,18 +955,18 @@ footer .social_tw {
     font-size: 0.95em;
   }
 
-  .main-header .contacts-box {
+  header .contacts-box {
     position: static;
     display: inline-block;
     vertical-align: top;
     margin: 20px 0;
   }
 
-  .main-header .contacts-box .phone_icon {
+  header .contacts-box .phone_icon {
     display: none;
   }
 
-  .main-header .contacts-box .phone_text {
+  header .contacts-box .phone_text {
     display: block;
     color: #ffd09c;
     font-weight: bold;
