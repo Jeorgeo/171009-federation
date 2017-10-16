@@ -173,8 +173,9 @@ img {
   width: 100%;
 }
 
-.color-text {
-
+.cols.wrap-box,
+.main-steps .container {
+  width: 90%;
 }
 
 @media (min-width: 768px) {
@@ -499,11 +500,6 @@ header .contacts-box .phone_text {
   display: none;
 }
 
-.main .wrap-box,
-.main-steps .container {
-  width: 90%;
-}
-
 h2,
 .main h4,
 .rules .main-form h4,
@@ -710,6 +706,7 @@ footer .box-social .social-icons a {
   margin: 1em auto;
   padding: 0.5em 1em;
   color: #908f94;
+  background-color: transparent;
   border: none;
   border-bottom: 1px solid #908f94;
 }
@@ -1013,6 +1010,7 @@ footer .social_tw {
   }
 
   .box-form {
+    width: 80%;
     background: rgba(255, 255, 255, 0.85);
     box-shadow: 0 0 50px 10px rgba(0, 0, 0, 0.15);
   }
@@ -1047,7 +1045,6 @@ footer .social_tw {
   }
 
   .rules .box-form {
-    width: 80%;
     margin-left: 15%;
     margin-right: 5%;
     margin-top: 3em;
@@ -1217,6 +1214,24 @@ footer .social_tw {
     margin: auto;
   }
 
+  .main-step.victory img {
+    max-width: 100%;
+  }
+
+  .main-step.step-2 {
+    margin-top: 5em;
+    margin-left: 2em;
+  }
+
+  .main-step.step-4 {
+    margin-top: 5em;
+    margin-right: 2em;
+  }
+
+  .main-order .col-5 {
+    margin-right: 8.33%;
+  }
+
   .rules-artefacts figure {
     width: 31%;
   }
@@ -1266,6 +1281,8 @@ footer .social_tw {
   .partner .container {
     max-width: 1000px;
   }
+
+
 
   /*--------------------------------------------------------------
     # Footer 1024px
