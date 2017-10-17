@@ -117,6 +117,8 @@ add_action( 'widgets_init', 'federation_widgets_init' );
  * Enqueue scripts and styles.
  */
 function federation_scripts() {
+	wp_enqueue_style( 'normalize-style', get_template_directory_uri() . '/css/normalize.css' );
+
 	wp_enqueue_style( 'federation-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'federation-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
@@ -150,9 +152,18 @@ require get_template_directory() . '/inc/template-functions.php';
 require get_template_directory() . '/inc/customizer.php';
 
 /**
+ * Добавление вкладки партнеры в панель управления
+ */
+require get_template_directory() . '/inc/partners.php';
+
+/**
  * Load Jetpack compatibility file.
  */
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+/**
+ * Load TGM files
+ */
+require get_template_directory() . '/tgm/tgm-files.php';

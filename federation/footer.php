@@ -11,23 +11,43 @@
 
 ?>
 
-	</div><!-- #content -->
-
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'federation' ) ); ?>"><?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'federation' ), 'WordPress' );
-			?></a>
-			<span class="sep"> | </span>
-			<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'federation' ), 'federation', '<a href="http://underscores.me/">Underscores.me</a>' );
-			?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
-
+<footer>
+	<div class="container clearfix">
+		<div class="contacts-box phone">
+			<a href="tel:89255107239">
+				<span class="phone_icon"></span>
+				<span class="phone_text">8 (925) 510-72-35</span>
+			</a>
+		</div>
+		<div class="footer-right">
+			<div class="contacts-box">
+				<a href="mailto:igra@gmail.com">
+					<span class="mail_icon"></span>
+					<span class="mail_text">igra@gmail.com</span>
+				</a>
+			</div>
+			<a class="policy" href="#">Политика конфиденциальности</a>
+		</div>
+		<div class="footer-center">
+			<div class="box-social">
+				<span class="social-icons social_vk"><a href="https://vk.com/id402797950">В контакте</a></span>
+				<span class="social-icons social_instagram"><a href="https://www.instagram.com/rusfedgame">Инстаграмм</a></span>
+				<span class="social-icons social_ok"><a href="https://ok.ru/profile/570383914077">Одноклассники</a></span>
+				<span class="social-icons social_tw"><a href="https://twitter.com/rfigra">Твиттер</a></span>
+			</div>
+			<p class="box-copy">
+				© Игра «Федерация», 2017
+			</p>
+		</div>
+		<p class="box-production">
+			Создание сайта: <a href="http://ws-sputnik.ru/">ws-sputnik.ru</a>
+		</p>
+	</div>
+</footer>
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/slick/slick.min.js"></script>
+	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/slider.js"></script>
 <?php wp_footer(); ?>
 
 </body>
