@@ -45,7 +45,7 @@ $news = get_posts(
 			<h3>
 				Партнеры в городах:
 			</h3>
-			<div class="flex-row">
+			<div class="row clearfix">
 				<?php
 					foreach ($news as $obj) {
 						if($obj->post_name == 'archive'){
@@ -53,7 +53,7 @@ $news = get_posts(
 						}
 				 ?>
 
-				<article class="flex-cols col-3">
+				<article class="cols col-3 col-6-md">
 					<h5><?php echo get_field('city', $obj->ID); ?></h5>
 					<p>
 						<?php echo $obj->post_title; ?><br>

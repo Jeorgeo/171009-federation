@@ -26,7 +26,7 @@
 					<span class="mail_text">igra@gmail.com</span>
 				</a>
 			</div>
-			<a class="policy" href="#">Политика конфиденциальности</a>
+			<a class="policy" href="<?php echo the_field('policy'); ?>" target="_blank">Политика конфиденциальности</a>
 		</div>
 		<div class="footer-center">
 			<div class="box-social">
@@ -40,7 +40,7 @@
 			</p>
 		</div>
 		<p class="box-production">
-			Создание сайта: <a href="http://ws-sputnik.ru/">ws-sputnik.ru</a>
+			Создание сайта: <a href="http://ws-sputnik.ru/" target="_blank">ws-sputnik.ru</a>
 		</p>
 	</div>
 </footer>

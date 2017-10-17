@@ -236,7 +236,8 @@ img {
     padding: 0;
   }
 
-  .cols.col-3 {
+  .cols.col-3
+   {
     width: 24.9999%;
     padding: 0;
   }
@@ -779,10 +780,14 @@ footer .box-social .social-icons a {
   background-size: contain;
 }
 
+.partner-order .wrap-box,
+.main-order .wrap-box {
+  background: rgba(255, 255, 255, 0.7);
+}
+
 .box-meet .big-text {
   display: block;
   width: 100%;
-  background: rgba(255, 255, 255, 0.7);
   padding: 0.5em;
   box-sizing: border-box;
 }
@@ -829,11 +834,18 @@ footer .box-social .social-icons a {
   color: #3a75c4;
 }
 
-.box-form button {
+.box-form button,
+.btn-partners {
   padding: 1em;
   color: #ffffff;
   background-color: #ff4040;
   border: 1px solid #908f94;
+}
+
+.box-form button:hover,
+.btn-partners:hover {
+  cursor: pointer;
+  background-color: #ef3038;
 }
 
 .main-steps .pc-version {
@@ -847,6 +859,13 @@ footer .box-social .social-icons a {
 
 .rules .btn-rules {
   max-width: 360px;
+  text-align: center;
+}
+
+.rules .btn-rules:hover,
+.main .btn-rules:hover {
+  color: #ffffff;
+  background-color: #3a75c4;
 }
 
 .rules .container h2,
@@ -961,12 +980,6 @@ footer .box-social .social-icons a {
 
 .partners h5 {
   font-size: 1.2em;
-}
-
-.partners .flex-row {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
 }
 
 .partners-map {
@@ -1338,6 +1351,10 @@ footer .social_tw {
     text-align: center;
   }
 
+  .box-meet {
+    min-height: 180px;
+  }
+
   .main-advantages figure {
     width: 25%;
   }
@@ -1434,12 +1451,27 @@ footer .social_tw {
     width: 85%;
   }
 
+  .btn-rules.btn-partners {
+    max-width: 300px;
+    text-align: center;
+  }
+
   .partner .container {
     max-width: 1000px;
   }
 
+  .partner-intro .big-text {
+    display: block;
+    text-align: center;
+  }
+
   .map-box {
     margin: 1em 0 3em 0;
+  }
+
+  .partners-list .col-3:nth-child(3n-1) {
+    margin-right: 12.5%;
+    margin-left: 12.5%;
   }
 
   /*--------------------------------------------------------------
