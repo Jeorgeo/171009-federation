@@ -52,13 +52,13 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 --------------------------------------------------------------*/
 
 @keyframes show-panel {
-  from { left: -235px; }
+  from { left: -90%; }
   to   { left: 0; }
 }
 
 @keyframes hidden-panel {
   from { left: 0; }
-  to   { left: -235px; }
+  to   { left: -90%; }
 }
 
 @keyframes rotate-up {
@@ -401,12 +401,22 @@ header .contacts-box .phone_text {
 }
 
 .floating-header {
+  animation-name: show-popup;
+  animation-duration: 0.5s;
   position: fixed;
   top: 0;
   z-index: 99999;
   width: 100%;
   background: linear-gradient(to bottom, #3a75c4, #1192d0);
   box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.15);
+  opacity: 1;
+}
+
+.floating-header.hidden {
+  animation-name: hidden-popup;
+  animation-duration: 0.5s;
+  opacity: 0;
+  display: none;
 }
 
 .header__video-wrapp {
@@ -446,8 +456,19 @@ video {
 
 .left-panel {
   position: absolute;
-  width: 70%;
-  left: -60%;
+  width: 60%;
+  padding: 1em;
+  color: #ffd09c;
+  background-color: #3a75c4;
+  animation-name:hidden-panel;
+  animation-duration: 0.8s;
+  left: -80%;
+}
+
+.left-panel-show {
+  animation-name:show-panel;
+  animation-duration: 0.8s;
+  left: -5%;
 }
 
 .left-panel__menu-toggle {
@@ -462,7 +483,8 @@ video {
 }
 
 .header-menu-toggle {
-  position: relative;
+  position: absolute;
+  left: 60px;
   display: block;
   width: 30px;
   height: 30px;
@@ -606,6 +628,11 @@ h2,
   background-color: transparent;
   border: 1px solid #ffd09c;
   border-radius: 50%;
+}
+
+.slick-arrow:hover {
+  cursor: pointer;
+  filter: brightness(0.95);
 }
 
 .slick-arrow::after,
@@ -1319,17 +1346,14 @@ footer .social_tw {
     width: 85%;
   }
 
-  .slick-arrow {
-    position: absolute;
-    top: 135px;
-  }
-
   .slick-arrow.slick-prev {
     left: -50px;
+    top: 135px;
   }
 
   .slick-arrow.slick-next {
     right: -50px;
+    top: 135px;
   }
 
   .main-steps .mobile-version {
@@ -1495,6 +1519,11 @@ footer .social_tw {
   /*--------------------------------------------------------------
     # Content 1360px
   --------------------------------------------------------------*/
+
+  .slick-arrow.slick-prev,
+  .slick-arrow.slick-next {
+    top: 145px;
+  }
 
   /*--------------------------------------------------------------
     # Footer 1360px

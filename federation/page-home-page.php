@@ -26,41 +26,79 @@
 </head>
 
 <header class="main-header">
-  <div class="container">
-    <div class="top-header clearfix">
-      <div class="left-panel">
-        <div id="js-toggle" class="left-panel__menu-toggle">
-          <button class="header-menu-toggle"><span>menu</span></button>
-        </div>
-        <nav class="mobile-menu">
+	<div class="top-header">
+		<div class="container clearfix">
+			<div class="left-panel">
+				<div id="js-toggle" class="left-panel__menu-toggle">
+					<button class="header-menu-toggle"><span>menu</span></button>
+				</div>
+				<nav class="mobile-menu">
 					<?php
 						wp_nav_menu( array(
 							'theme_location' => 'menu-1',
 							'menu_id'        => 'primary-menu',
 						) );
 					?>
-        </nav>
-      </div>
-      <div class="logo-box">
+				</nav>
+			</div>
+			<div class="logo-box">
 				<div class="site-branding">
 					<?php	the_custom_logo(); ?>
 				</div>
-      </div>
-      <nav class="main-menu clearfix">
+			</div>
+			<nav class="main-menu clearfix">
 				<?php
 					wp_nav_menu( array(
 						'theme_location' => 'menu-1',
 						'menu_id'        => 'primary-menu',
 					) );
 				?>
-      </nav>
-      <div class="contacts-box">
-        <a href="tel:89255107239">
-          <span class="phone_icon"></span>
-          <span class="phone_text">8 (925) 510-72-35</span>
-        </a>
-      </div>
-    </div>
+			</nav>
+			<div class="contacts-box">
+				<a href="tel:89255107239">
+					<span class="phone_icon"></span>
+					<span class="phone_text">8 (925) 510-72-35</span>
+				</a>
+			</div>
+		</div>
+	</div>
+	<div class="top-header main-top-header floating-header hidden">
+		<div class="container clearfix">
+			<div class="left-panel-2">
+				<div id="js-toggle" class="left-panel__menu-toggle js-toggle">
+					<button class="header-menu-toggle-2"><span>menu</span></button>
+				</div>
+				<nav class="mobile-menu">
+					<?php
+						wp_nav_menu( array(
+							'theme_location' => 'menu-1',
+							'menu_id'        => 'primary-menu',
+						) );
+					?>
+				</nav>
+			</div>
+			<div class="logo-box">
+				<div class="site-branding">
+					<?php	the_custom_logo(); ?>
+				</div>
+			</div>
+			<nav class="main-menu clearfix">
+				<?php
+					wp_nav_menu( array(
+						'theme_location' => 'menu-1',
+						'menu_id'        => 'primary-menu',
+					) );
+				?>
+			</nav>
+			<div class="contacts-box">
+				<a href="tel:89255107239">
+					<span class="phone_icon"></span>
+					<span class="phone_text">8 (925) 510-72-35</span>
+				</a>
+			</div>
+		</div>
+	</div>
+	<div class="container">
     <div class="middle-header">
       <h1>
         Игра «Федерация»
@@ -162,7 +200,7 @@
 						<div class="slide">
 							<img src="<?php bloginfo('template_url'); ?>/pics/fed_rules-img-1.jpg" alt>
 						</div>
-					</div>					
+					</div>
 				</div>
 
 
@@ -310,7 +348,7 @@
                 Оформить заказ
               </h4>
               <input type="text" name="name" value="" placeholder="ФИО*">
-              <input type="text" name="phone" value="" placeholder="Контактный телефон*">
+              <input id="phone" type="text" name="phone" value="" placeholder="Контактный телефон*">
               <input type="text" name="email" value="" placeholder="E-mail*">
               <input type="text" name="adress" value="" placeholder="Адрес доставки*">
               <span class="price">

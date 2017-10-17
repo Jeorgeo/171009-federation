@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Контакты
+ * Template Name: Наши контакты
  *
  * This is the template that displays all pages by default.
  * Please note that this is the WordPress construct of pages
@@ -12,10 +12,28 @@
  * @package federation
  */
 
-get_header(); ?>
+get_header();
+
+$news = get_posts(
+		array(
+				'numberposts' => -1,
+				'offset' => 0,
+				'orderby'     => 'date',
+				'order'       => 'DESC',
+				'category' => '',
+				'include' => '',
+				'exclude' => '',
+				'meta_key' => '',
+				'meta_value' => '',
+				'post_type' => 'partners',
+				'post_parent' => '',
+				'post_status' => 'publish'
+		)
+);
+?>
 
 <main class="partners">
-	<section class="partners__list">
+	<section class="partners-list">
 		<div class="container">
 			<h2>
 				Контакты
@@ -34,35 +52,40 @@ get_header(); ?>
 				В «Федерацию» играют:
 			</h3>
 			<div class="flex-row">
+				<?php
+					foreach ($news as $obj) {
+						if($obj->post_name == 'archive'){
+								continue;
+						}
+				 ?>
+
 				<article class="flex-cols col-3">
-					<h5>Москва</h5>
+					<h5><?php echo get_field('city', $obj->ID); ?></h5>
 					<p>
-						Александр Ковалевский<br>
-						Телефон: +7 (800) 000-00-00<br>
-						E-mail: alexanderk@gmail.com
+						<?php echo $obj->post_title; ?><br>
+						Телефон: <?php echo get_field('phone', $obj->ID); ?><br>
+						E-mail: <?php echo get_field('mail', $obj->ID); ?>
 					</p>
 				</article>
-				<article class="flex-cols col-3">
-					<h5>Санкт-Петербург</h5>
-					<p>
-						Александр Ковалевский<br>
-						Телефон: +7 (800) 000-00-00<br>
-						E-mail: alexanderk@gmail.com
-					</p>
-				</article>
-				<article class="flex-cols col-3">
-					<h5>Сочи</h5>
-					<p>
-						Александр Ковалевский<br>
-						Телефон: +7 (800) 000-00-00<br>
-						E-mail: alexanderk@gmail.com
-					</p>
-				</article>
+
+			<?php } ?>
+
+
+			</div>
+			<a class="btn-rules btn-partners" href="#">Стать партнером</a>
+		</div>
+	</section>
+	<section class="partners-map">
+		<div class="container">
+			<h2>
+				Карта
+			</h2>
+			<div class="map-box clearfix">
+				<?php echo the_field('map'); ?>
 			</div>
 		</div>
 	</section>
 </main>
 
 <?php
-
 get_footer();
