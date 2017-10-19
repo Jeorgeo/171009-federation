@@ -62,11 +62,11 @@
 		</div>
 	</div>
   <div class="middle-header">
-		<div class="container">
-			<h1 class="wow bounceInLeft" data-wow-duration="1.5s">
+		<div class="container wow fadeInUp" data-wow-duration="1.5s">
+			<h1>
 	       Игра «Федерация»
 	    </h1>
-	    <p class="wow bounceInRight" data-wow-duration="1.5s">
+	    <p>
 	      Мы живем в самой большой стране
       </p>
 		</div>
@@ -230,14 +230,14 @@
       <div class="pc-version">
         <div class="row clearfix">
           <div class="cols col-4">
-            <figure class="wow bounceInLeft main-step step-2" data-wow-duration="2.5s">
+            <figure class="wow fadeInLeft main-step step-2" data-wow-duration="2.5s">
               <img src="<?php bloginfo('template_url'); ?>/img/fed_main-icon-process2.png" alt="">
               <p>
                 У каждого игрока на руках фишки и 6 карт. Когда подходит его очередь, игрок открывает одну из своих карт
               </p>
               <span>2</span>
             </figure>
-            <figure class="wow bounceInLeft main-step step-1" data-wow-duration="2.5s">
+            <figure class="wow fadeInLeft main-step step-1" data-wow-duration="2.5s">
               <img src="<?php bloginfo('template_url'); ?>/img/fed_main-icon-process1.png" alt="">
               <p>
                 Каждой клетке с названием региона соответствует карта с названием его административного центра (города
@@ -246,14 +246,14 @@
             </figure>
           </div>
           <div class="cols col-4">
-            <figure class="wow bounceInDown main-step step-3" data-wow-duration="1.5s">
+            <figure class="wow fadeInDown main-step step-3" data-wow-duration="1.5s">
               <img src="<?php bloginfo('template_url'); ?>/img/fed_main-icon-process3.png" alt="">
               <p>
                 Открыв карту с названием города, игрок ставит фишку на клетку с соответствующим регионом на поле.  Открытая карта сбрасывается.
               </p>
               <span>3</span>
             </figure>
-            <figure class="wow bounceInUp main-step victory" data-wow-duration="1.5s">
+            <figure class="wow fadeInUp main-step victory" data-wow-duration="1.5s">
               <img src="<?php bloginfo('template_url'); ?>/pics/fed_main-victory.png" alt="">
               <p>
                 Побеждает та команда или игрок, которые первыми построили три суперлинии.
@@ -261,14 +261,14 @@
             </figure>
           </div>
           <div class="cols col-4">
-            <figure class="wow bounceInRight main-step step-4" data-wow-duration="1.5s">
+            <figure class="wow fadeInRight main-step step-4" data-wow-duration="1.5s">
               <img src="<?php bloginfo('template_url'); ?>/img/fed_main-icon-process4.png" alt="">
               <p>
                 Затем игрок берет новую карту из общей колоды, взамен сброшенной, после чего ход переходит к следующему игроку.
               </p>
               <span>4</span>
             </figure>
-            <figure class="wow bounceInRight main-step step-5" data-wow-duration="1.5s">
+            <figure class="wow fadeInRight main-step step-5" data-wow-duration="1.5s">
               <img src="<?php bloginfo('template_url'); ?>/img/fed_main-icon-process5.png" alt="">
               <p>
                 По ходу игры поле заполняется фишками разных цветов. Ряд из шести фишек одного цвета называется суперлинией.
@@ -306,8 +306,8 @@
             </span>
           </p>
         </div>
-        <div class="cols col-5 col-6-md">
-          <div class="wow bounceInRight box-form ">
+        <div class="cols col-5 col-6-md form-col">
+          <div class="wow fadeInRight box-form ">
             <form class="main-form" method="post">
               <h4>
                 Оформить заказ
