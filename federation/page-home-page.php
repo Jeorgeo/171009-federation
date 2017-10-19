@@ -87,7 +87,9 @@
       </video>
     </div>
   </div>
-  <span class="follow_button">Вниз</span>
+	<div id="follow-box">
+		<a class="follow_button" href="#next">Вниз</a>
+	</div>
 </header>
 <main class="main">
   <section class="main-intro">
@@ -127,7 +129,7 @@
       </div>
     </div>
   </section>
-  <section class="main-advantages">
+  <section id="next" class="main-advantages">
     <div class="container">
       <h2>
         Игра «Федерация»:
@@ -167,10 +169,8 @@
 						</div>
 					</div>
 				</div>
-
-
       </div>
-      <p>
+      <p class="meet-social">
         Присоединяйтесь к нам в социальных сетях
       </p>
       <div class="box-social">
@@ -314,7 +314,7 @@
               </h4>
               <input type="text" name="name" value="" placeholder="ФИО*">
               <input id="phone" type="text" name="phone" value="" placeholder="Контактный телефон*">
-              <input type="text" name="email" value="" placeholder="E-mail*">
+              <input type="text" name="email" value="" placeholder="E-mail*" pattern="^([A-Za-z0-9_\.\-]{1,20})@([a-z0-9\.\-]{1,20})\.([a-z]{2,4})">
               <input type="text" name="adress" value="" placeholder="Адрес доставки*">
               <span class="price">
                 Всего: 1690 руб.

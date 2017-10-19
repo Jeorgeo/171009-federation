@@ -407,7 +407,33 @@ header .contacts-box .phone_text {
 }
 
 .follow_button {
-  display: none;
+  position: relative;
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin: 0 auto;
+  font-size: 0;
+}
+
+.follow_button::after,
+.follow_button::before {
+  position: absolute;
+  top: 10px;
+  display: block;
+  width: 30px;
+  height: 2px;
+  content: '';
+  background-color: #ffffff;
+}
+
+.follow_button::after {
+  left: -10px;
+  transform: rotate(45deg);
+}
+
+.follow_button::before {
+  right: -10px;
+  transform: rotate(-45deg);
 }
 
 .floating-header {
@@ -423,6 +449,7 @@ header .contacts-box .phone_text {
 
 .main-header.lowered {
   margin-top: 55px;
+  padding-top: 10em;
 }
 
 .header__video-wrapp {
@@ -1014,6 +1041,28 @@ footer .box-social .social-icons a {
   min-height: 150px;
 }
 
+/*----------slider--------------------*/
+
+.slick-slide img {
+  width: 80%;
+  animation-name: deflate;
+  animation-duration: 0.5s;
+  margin-top: 14%;
+  box-shadow: 0 0 0 0 #c4c4ca;;
+}
+
+.slick-slide.slick-center img {
+  width: 100%;
+  margin-top: 0;
+  animation-name: swell;
+  animation-duration: 0.5s;
+  box-shadow: 0 0 25px 5px #c4c4ca;;
+}
+
+.slick-list {
+  padding: 1em 0 3em 0!important;
+}
+
 
 /*--------------------------------------------------------------
 # Footer
@@ -1143,6 +1192,10 @@ footer .social_tw {
     max-width: 67%;
   }
 
+  main {
+    min-height: 960px;
+  }
+
   main .container .box-meet {
     padding: 0 2em;
     box-sizing: border-box;
@@ -1239,10 +1292,6 @@ footer .social_tw {
 
   .partner-game .cols.col-8 {
     padding-left: 10%;
-  }
-
-  .partners {
-    min-height: 600px;
   }
 
 /*--------------------------------------------------------------
@@ -1356,9 +1405,11 @@ footer .social_tw {
 
   main {
     margin-top: 100px;
+    min-height: 700px;
   }
 
   .main-intro {
+    margin-top: 4em;
     text-align: left;
   }
 
@@ -1577,6 +1628,22 @@ footer .social_tw {
     width: 70%;
   }
 
+  .slick-slide.slick-center img {
+    position: absolute;
+    width: 480px;
+    margin-top: -27px;
+    margin-left: -50px;
+    animation-name: swell;
+    animation-name: show-popup;
+    animation-duration: 0.5s;
+    box-shadow: 0 0 15px 5px #c4c4ca;
+  }
+
+  .meet-social {
+    display: block;
+    margin-top: 3em;
+  }
+
   /*--------------------------------------------------------------
     # Footer 1280px
   --------------------------------------------------------------*/
@@ -1617,28 +1684,12 @@ footer .social_tw {
     # Content 1600px
   --------------------------------------------------------------*/
 
+  main {
+    min-height: 900px;
+  }
+
   /*--------------------------------------------------------------
     # Footer 1600px
   --------------------------------------------------------------*/
 
-}
-
-.slick-slide img {
-  width: 80%;
-  animation-name: deflate;
-  animation-duration: 0.5s;
-  margin-top: 14%;
-  box-shadow: 0 0 0 0 #c4c4ca;;
-}
-
-.slick-slide.slick-center img {
-  width: 100%;
-  margin-top: 0;
-  animation-name: swell;
-  animation-duration: 0.5s;
-  box-shadow: 0 0 25px 5px #c4c4ca;;
-}
-
-.slick-list {
-  padding: 1em 0!important;
 }

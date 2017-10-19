@@ -104,7 +104,7 @@ get_header(); ?>
 							</h4>
 							<input type="text" name="name" value="" placeholder="ФИО*">
 							<input id="phone" type="text" name="phone" value="" placeholder="Контактный телефон*">
-							<input type="text" name="email" value="" placeholder="E-mail*">
+							<input type="text" name="email" value="" placeholder="E-mail*" pattern="^([A-Za-z0-9_\.\-]{1,20})@([a-z0-9\.\-]{1,20})\.([a-z]{2,4})">
 							<input type="text" name="adress" value="" placeholder="Город*">
 							<button class="box-form__btn"type="submit" name="order-btn">Отправить</button>
 						</form>
