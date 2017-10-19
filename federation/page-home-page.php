@@ -24,9 +24,8 @@
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/slick/slick-theme.css"/>
 	<?php wp_head(); ?>
 </head>
-
 <header class="main-header">
-	<div class="top-header">
+	<div class="top-header main-top-header">
 		<div class="container clearfix">
 			<div class="left-panel">
 				<div id="js-toggle" class="left-panel__menu-toggle">
@@ -62,57 +61,23 @@
 			</div>
 		</div>
 	</div>
-	<div class="top-header main-top-header floating-header hidden">
-		<div class="container clearfix">
-			<div class="left-panel-2">
-				<div id="js-toggle" class="left-panel__menu-toggle js-toggle">
-					<button class="header-menu-toggle-2"><span>menu</span></button>
-				</div>
-				<nav class="mobile-menu">
-					<?php
-						wp_nav_menu( array(
-							'theme_location' => 'menu-1',
-							'menu_id'        => 'primary-menu',
-						) );
-					?>
-				</nav>
-			</div>
-			<div class="logo-box">
-				<div class="site-branding">
-					<?php	the_custom_logo(); ?>
-				</div>
-			</div>
-			<nav class="main-menu clearfix">
-				<?php
-					wp_nav_menu( array(
-						'theme_location' => 'menu-1',
-						'menu_id'        => 'primary-menu',
-					) );
-				?>
-			</nav>
-			<div class="contacts-box">
-				<a href="tel:89255107239">
-					<span class="phone_icon"></span>
-					<span class="phone_text">8 (925) 510-72-35</span>
-				</a>
-			</div>
-		</div>
-	</div>
-	<div class="container">
-    <div class="middle-header">
-      <h1>
-        Игра «Федерация»
-      </h1>
-      <p>
-        Мы живем в самой большой стране
+  <div class="middle-header">
+		<div class="container">
+			<h1 class="wow bounceInLeft" data-wow-duration="1.5s">
+	       Игра «Федерация»
+	    </h1>
+	    <p class="wow bounceInRight" data-wow-duration="1.5s">
+	      Мы живем в самой большой стране
       </p>
-    </div>
-    <div class="bottom-header">
-      <a href="#">
-        <span class="video_text">Смотреть<br> видео</span>
-        <span class="video_btn"></span>
-      </a>
-    </div>
+		</div>
+  </div>
+  <div class="bottom-header">
+		<div class="container">
+			<a href="#" class="<?php echo the_field('link1'); ?>">
+	      <span class="video_text">Смотреть<br> видео</span>
+	      <span class="video_btn"></span>
+	    </a>
+		</div>
   </div>
   <div class="header__video-wrapp">
     <div class="header__video-box">
@@ -139,7 +104,7 @@
         </p>
       </div>
       <div class="cols col-7 col-6-md float_right">
-        <a class="video_frame" href="#">
+        <a href="#" class="video_frame <?php echo the_field('link2'); ?>">
           <img src="<?php bloginfo('template_url'); ?>/pics/fed_main-map.jpg" alt="Карта России">
           <span class="btn-play">play</span>
         </a>
@@ -189,16 +154,16 @@
       	<div class="main-slider">
 					<div class="slider-box">
 						<div class="slide">
-							<img src="<?php bloginfo('template_url'); ?>/pics/fed_rules-img-1.jpg" alt>
+							<?php echo the_field('link5'); ?>
 						</div>
 						<div class="slide">
-							<img src="<?php bloginfo('template_url'); ?>/pics/fed_rules-img-1.jpg" alt>
+							<?php echo the_field('link5'); ?>
 						</div>
 						<div class="slide">
-							<img src="<?php bloginfo('template_url'); ?>/pics/fed_rules-img-1.jpg" alt>
+							<?php echo the_field('link5'); ?>
 						</div>
 						<div class="slide">
-							<img src="<?php bloginfo('template_url'); ?>/pics/fed_rules-img-1.jpg" alt>
+							<?php echo the_field('link5'); ?>
 						</div>
 					</div>
 				</div>
@@ -265,14 +230,14 @@
       <div class="pc-version">
         <div class="row clearfix">
           <div class="cols col-4">
-            <figure class="main-step step-2">
+            <figure class="wow bounceInLeft main-step step-2" data-wow-duration="2.5s">
               <img src="<?php bloginfo('template_url'); ?>/img/fed_main-icon-process2.png" alt="">
               <p>
                 У каждого игрока на руках фишки и 6 карт. Когда подходит его очередь, игрок открывает одну из своих карт
               </p>
               <span>2</span>
             </figure>
-            <figure class="main-step step-1">
+            <figure class="wow bounceInLeft main-step step-1" data-wow-duration="2.5s">
               <img src="<?php bloginfo('template_url'); ?>/img/fed_main-icon-process1.png" alt="">
               <p>
                 Каждой клетке с названием региона соответствует карта с названием его административного центра (города
@@ -281,14 +246,14 @@
             </figure>
           </div>
           <div class="cols col-4">
-            <figure class="main-step step-3">
+            <figure class="wow bounceInDown main-step step-3" data-wow-duration="1.5s">
               <img src="<?php bloginfo('template_url'); ?>/img/fed_main-icon-process3.png" alt="">
               <p>
                 Открыв карту с названием города, игрок ставит фишку на клетку с соответствующим регионом на поле.  Открытая карта сбрасывается.
               </p>
               <span>3</span>
             </figure>
-            <figure class="main-step victory">
+            <figure class="wow bounceInUp main-step victory" data-wow-duration="1.5s">
               <img src="<?php bloginfo('template_url'); ?>/pics/fed_main-victory.png" alt="">
               <p>
                 Побеждает та команда или игрок, которые первыми построили три суперлинии.
@@ -296,14 +261,14 @@
             </figure>
           </div>
           <div class="cols col-4">
-            <figure class="main-step step-4">
+            <figure class="wow bounceInRight main-step step-4" data-wow-duration="1.5s">
               <img src="<?php bloginfo('template_url'); ?>/img/fed_main-icon-process4.png" alt="">
               <p>
                 Затем игрок берет новую карту из общей колоды, взамен сброшенной, после чего ход переходит к следующему игроку.
               </p>
               <span>4</span>
             </figure>
-            <figure class="main-step step-5">
+            <figure class="wow bounceInRight main-step step-5" data-wow-duration="1.5s">
               <img src="<?php bloginfo('template_url'); ?>/img/fed_main-icon-process5.png" alt="">
               <p>
                 По ходу игры поле заполняется фишками разных цветов. Ряд из шести фишек одного цвета называется суперлинией.
@@ -320,10 +285,10 @@
     <div class="container row clearfix">
       <div class="cols col-4 col-6-md wrap-box">
         <img class="hidden-block_768" src="<?php bloginfo('template_url'); ?>/pics/fed_main-rules.jpg" alt="Правила игры">
-        <a class="btn-rules" href="#">Правила игры</a>
+        <a class="btn-rules" href="<?php echo the_field('link3'); ?>" target="_blank">Правила игры</a>
       </div>
       <div class="cols col-7 col-6-md float_right">
-        <a class="video_frame" href="#">
+        <a class="video_frame <?php echo the_field('link4'); ?>" href="#">
           <img src="<?php bloginfo('template_url'); ?>/pics/fed_main-video.jpg" alt="Правила игры">
           <span class="btn-play">play</span>
         </a>
@@ -332,6 +297,7 @@
   </section>
   <section class="main-order">
     <div class="container">
+			<a name="order"></a>
       <div class="row clearfix">
         <div class="cols col-5 col-6-md wrap-box">
           <p class="box-meet">
@@ -341,8 +307,7 @@
           </p>
         </div>
         <div class="cols col-5 col-6-md">
-					<a name="order"></a>
-          <div class="box-form">
+          <div class="wow bounceInRight box-form ">
             <form class="main-form" method="post">
               <h4>
                 Оформить заказ

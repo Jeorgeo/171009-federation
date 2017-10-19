@@ -19,13 +19,15 @@ responsive: [
 });
 $(window).scroll(function() {
 
-    if ($(this).scrollTop() > 200){
+    if ($(this).scrollTop() > 100){
 
-        $('.main-top-header').removeClass("hidden");
+        $('.main-top-header').addClass("floating-header");
+        $('.main-header').addClass("lowered");
 
-    }  else{
+    }  else {
 
-        $('.main-top-header').addClass("hidden");
+        $('.main-top-header').removeClass("floating-header");
+        $('.main-header').removeClass("lowered");
     }
 
 });

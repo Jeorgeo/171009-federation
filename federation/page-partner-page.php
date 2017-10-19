@@ -64,9 +64,9 @@ get_header(); ?>
 				Как стать нашим партнером?
 			</h3>
 			<ul>
-				<li><span class="list partner-process__number"><span class="list-number">1</span></span><span class="list partner-process__text">Вы оставляете заявку на сайте. Получаете от нас положительный ответ и <a href="#">договор</a> дистрибьютора.</span></li>
+				<li><span class="list partner-process__number"><span class="list-number">1</span></span><span class="list partner-process__text">Вы оставляете заявку на сайте. Получаете от нас положительный ответ и <a href="<?php echo the_field('link1'); ?>">договор</a> дистрибьютора.</span></li>
 				<li><span class="list partner-process__number"><span class="list-number">2</span></span><span class="list partner-process__text">Заполняете свои данные в договоре, распечатываете (в 2-х экземплярах) и отправляете нам в офис письмом. Производите оплату игры
-на расчетный счет с 50% скидкой (<a href="#">варианты платежа</a>).</span></li>
+на расчетный счет с 50% скидкой (<a href="<?php echo the_field('link2'); ?>">варианты платежа</a>).</span></li>
 				<li><span class="list partner-process__number"><span class="list-number">3</span></span><span class="list partner-process__text">Получив договор, мы подписываем его и оправляем вам вместе с одним экземпляром игры на ваш почтовый адрес.</span></li>
 				<li><span class="list partner-process__number"><span class="list-number">4</span></span><span class="list partner-process__text">Вы самостоятельно выбираете время, место и количество участников для проведения игры.</span></li>
 				<li><span class="list partner-process__number"><span class="list-number">5</span></span><span class="list partner-process__text">Проведя игру вы собираете заявки и оплату от желающих купить игру, делаете заказ и производите оплату.</span></li>

@@ -119,6 +119,8 @@ add_action( 'widgets_init', 'federation_widgets_init' );
 function federation_scripts() {
 	wp_enqueue_style( 'normalize-style', get_template_directory_uri() . '/css/normalize.css' );
 
+	wp_enqueue_style( 'animate-style', get_template_directory_uri() . '/css/animate.css' );
+
 	wp_enqueue_style( 'federation-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'federation-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );

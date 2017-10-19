@@ -53,7 +53,9 @@
    jQuery(function($){
    $("#phone").mask("+7(999) 999-9999");
    });
-</script>
+	 </script>
+	 <script src="<?php bloginfo('template_url'); ?>/js/wow.min.js"></script>
+   <script>new WOW().init();</script>
 <?php wp_footer(); ?>
 
 </body>
