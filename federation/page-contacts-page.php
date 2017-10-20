@@ -39,7 +39,7 @@ $news = get_posts(
 				Контакты
 			</h2>
 			<div class="row clearfix">
-				<div class="cols col-3">
+				<div class="cols col-4">
 					<p><span class="strong-text">Телефон:</span> 8 (925) 510-72-35<br>
 					<span class="strong-text">E-mail:</span> rf-igra@mail.ru</p>
 				</div>

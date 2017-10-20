@@ -98,9 +98,9 @@
         <h3>
           Мы любим путешествовать по разным странам и открывать для себя новые города.
         </h3>
-        <p><span class="big-text">
+        <span class="big-text">
           А на сколько хорошо мы знаем свою любимую Россию?
-        </span></p>
+        </span>
         <p>
           Мы живем в стране, территория которой, самая большая в мире. Жаль, что многие из нас знают, где находится Неаполь или Нью-Йорк, но не знают регионы и города своей бескрайней Родины...
         </p>
@@ -120,9 +120,9 @@
         <p>
           Играя вам не будет скучно, как это часто происходит на уроках географии, наоборот вы полностью будете увлечены игровым процессом.
         </p>
-        <p><span class="big-text">
+        <span class="big-text">
           Мы вам это гарантируем!
-        </span></p>
+        </span>
       </div>
       <div class="cols col-4 col-6-md">
         <img src="<?php bloginfo('template_url'); ?>/pics/fed_main-game.jpg" alt="Игра «Федерация»">
@@ -142,8 +142,8 @@
         <img class="central-block" src="<?php bloginfo('template_url'); ?>/pics/fed_main-education.png" alt="Игра «Федерация» Развивает и обучает">
         <p>Развивает и обучает</p>
       </figure>
-      <figure>
-        <img class="last-block" src="<?php bloginfo('template_url'); ?>/pics/fed_main-community.png" alt="Игра «Федерация» Cтирает границы между поколениями">
+      <figure class="last-block">
+        <img src="<?php bloginfo('template_url'); ?>/pics/fed_main-community.png" alt="Игра «Федерация» Cтирает границы между поколениями">
         <p>Стирает границы между поколениями</p>
       </figure>
     </div>
@@ -283,7 +283,7 @@
   </section>
   <section class="main-rules">
     <div class="container row clearfix">
-      <div class="cols col-4 col-6-md wrap-box">
+      <div class="cols col-5 col-6-md wrap-box">
         <img class="hidden-block_768" src="<?php bloginfo('template_url'); ?>/pics/fed_main-rules.jpg" alt="Правила игры">
         <a class="btn-rules" href="<?php echo the_field('link3'); ?>" target="_blank">Правила игры</a>
       </div>
