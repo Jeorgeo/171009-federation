@@ -1,0 +1,3 @@
+token=1bfc828742cd6bf2de9adf82d27921b19f671cb73ca65327daacd6f15be9270f38f8bda82b06a7f8090a8
+
+https://api.vk.com/method/photos.get?owner_id=-154864687&album_id=247785027&count=100&access_token=1bfc828742cd6bf2de9adf82d27921b19f671cb73ca65327daacd6f15be9270f38f8bda82b06a7f8090a8&v=5.68
