@@ -285,10 +285,10 @@
     <div class="container row clearfix">
       <div class="cols col-5 col-6-md wrap-box">
         <img class="hidden-block_768" src="<?php bloginfo('template_url'); ?>/pics/fed_main-rules.jpg" alt="Правила игры">
-        <a class="btn-rules" href="<?php echo the_field('link3'); ?>" target="_blank">Правила игры</a>
+        <a class="btn-rules" href="<?php echo the_field('link4'); ?>" target="_blank">Правила игры</a>
       </div>
       <div class="cols col-7 col-6-md float_right">
-        <a class="video_frame <?php echo the_field('link4'); ?>" href="#">
+        <a class="video_frame <?php echo the_field('link3'); ?>" href="#">
           <img src="<?php bloginfo('template_url'); ?>/pics/fed_main-video.jpg" alt="Правила игры">
           <span class="btn-play">play</span>
         </a>

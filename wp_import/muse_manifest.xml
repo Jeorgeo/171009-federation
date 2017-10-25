@@ -1,0 +1,41 @@
+<manifest alg="2" build="2017.0.2.363" opt="false" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="FTP" domain="http://xn----8sbit2bdy.xn--p1ai" resolutions="1x" timestamp="1492962152060" ftp_hostname="ftp://ftp.h12252-4.r01host.ru" ftp_rootfolder="//">
+  <folder name="css">
+    <file name="site_global.css" crc="443350757"/>
+    <file name="index.css" crc="179988509" ref="index"/>
+    <file name="nomq_index.css" crc="3927045845" ref="index"/>
+  </folder>
+  <folder name="scripts">
+    <file name="jquery-1.8.3.min.js" crc="209076791" ref="index"/>
+    <file name="museutils.js" crc="4232573551" ref="index"/>
+    <file name="whatinput.js" crc="86476730" ref="index"/>
+    <file name="museconfig.js" crc="3849126041" ref="index"/>
+    <file name="jquery.watch.js" crc="3844535323" ref="index"/>
+    <file name="jquery.museresponsive.js" crc="433634197" ref="index"/>
+    <file name="require.js" crc="4234670167" ref="index"/>
+  </folder>
+  <folder name="images">
+    <file name="prhxjoky3a4.jpg" crc="303646509" ref="index">
+      <caption webpage="index" alt=""/>
+      <caption webpage="index" alt=""/>
+    </file>
+  </folder>
+  <file name="index.html" crc="4081931738" seo="true" mt="1492962144734" redirect="true"/>
+  <site>
+    <paragraphStyle className="normal_text" uid="U49"/>
+    <nestedListStyle className="nls-None" uid="U52"/>
+  </site>
+  <renditions>
+    <rendition device="desktop">
+      <page name="Домашняя" filename="index.html" muse_href="page:U93" master="U72">
+        <breakpoint uid="U83" maxwidth="960" minwidth="0" squishy="true"/>
+        <breakpoint uid="U134" maxwidth="1280" minwidth="961" squishy="true"/>
+      </page>
+      <masterPage name="Шаблон-A" master="U62" uid="U72">
+        <breakpoint uid="U73" maxwidth="960" minwidth="0" squishy="true"/>
+      </masterPage>
+      <masterPage name="None" master="null" uid="U62">
+        <breakpoint uid="U63" maxwidth="960" minwidth="0" squishy="true"/>
+      </masterPage>
+    </rendition>
+  </renditions>
+</manifest>

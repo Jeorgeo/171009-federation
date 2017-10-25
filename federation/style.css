@@ -355,7 +355,7 @@ main.main {
 
 header .contacts-box {
   position: absolute;
-  top: 8px;
+  top: 12px;
   right: 0;
 }
 
@@ -531,7 +531,7 @@ header .contacts-box .phone_text {
 
 .header-menu-toggle {
   position: absolute;
-  top: 6px;
+  top: 9px;
   left: 60px;
   display: block;
   width: 30px;
@@ -539,6 +539,7 @@ header .contacts-box .phone_text {
   margin: 3px;
   background-color: transparent;
   border: none;
+  outline: none;
 }
 
 .header-menu-toggle span {
@@ -699,23 +700,24 @@ h2,
   height: 46px;
   margin: 1em 0.5em;
   font-size: 0;
-  background-color: transparent;
-  border: 1px solid #ffd09c;
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
   border-radius: 50%;
+  outline: none;
 }
 
 .slick-arrow:hover {
   cursor: pointer;
-  filter: brightness(0.95);
+  border: 1px solid #ffffff;
 }
 
 .slick-arrow::after,
 .slick-arrow::before {
   position: absolute;
-  top: 15px;
-  left: 15px;
+  top: 17px;
+  left: 18px;
   display: block;
-  width: 20px;
+  width: 12px;
   height: 2px;
   background-color: #ffd09c;
   content: '';
@@ -727,7 +729,7 @@ h2,
 
 .slick-arrow::before {
   transform: rotate(-45deg);
-    top: 28px;
+    top: 25px;
 }
 
 .slick-arrow.slick-prev {
@@ -1055,7 +1057,7 @@ footer .box-social .social-icons a {
   color: #ff4040;
   background-color: #ffffff;
   border-radius: 50%;
-  box-shadow: 0 0 25px 3px #c4c4ca;
+  box-shadow: 0 0 12px 3px #c4c4ca;
   box-sizing: border-box;
 }
 
@@ -1128,6 +1130,7 @@ footer .contacts-box .mail_icon {
   vertical-align: top;
   width: 30px;
   height: 30px;
+  margin-top: 0.1em;
   background: url('img/fed_main-icon-phone.png') no-repeat 50% 50%;
   background-size: contain;
 }
@@ -1388,8 +1391,8 @@ footer .social_tw {
     vertical-align: top;
     margin: 0;
     margin-right: 1em;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
   }
 
   .main-header {
@@ -1431,13 +1434,13 @@ footer .social_tw {
   }
 
   .main-menu li {
-    margin: 25px 0.5em;
+    margin: 1.7em 0.5em;
   }
 
   header .contacts-box {
     position: static;
     float: right;
-    margin: 23px 0;
+    margin: 1.5em 0;
   }
 
   header .contacts-box .phone_icon {
@@ -1753,10 +1756,6 @@ footer .social_tw {
     margin-left: 2em;
   }
 
-  .main-menu li {
-    margin: 25px 1.5em;
-  }
-
   /*--------------------------------------------------------------
     # Content 1280px
   --------------------------------------------------------------*/
@@ -1785,7 +1784,7 @@ footer .social_tw {
     animation-name: swell;
     animation-name: show-popup;
     animation-duration: 0.5s;
-    box-shadow: 0 0 15px 5px #c4c4ca;
+    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.25);
   }
 
   .meet-social {
