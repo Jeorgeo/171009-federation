@@ -25,13 +25,28 @@
 	<?php wp_head(); ?>
 </head>
 <header class="main-header">
-	<div class="top-header main-top-header">
-		<div class="container clearfix">
-			<div class="left-panel">
-				<div id="js-toggle" class="left-panel__menu-toggle">
-					<button class="header-menu-toggle"><span>menu</span></button>
+	<div class="main-header__top-box">
+		<div class="top-header main-top-header">
+			<div class="container clearfix">
+				<div class="left-panel">
+					<div id="js-toggle" class="left-panel__menu-toggle">
+						<button class="header-menu-toggle"><span>menu</span></button>
+					</div>
+					<nav class="mobile-menu">
+						<?php
+							wp_nav_menu( array(
+								'theme_location' => 'menu-1',
+								'menu_id'        => 'primary-menu',
+							) );
+						?>
+					</nav>
 				</div>
-				<nav class="mobile-menu">
+				<div class="logo-box">
+					<div class="site-branding">
+						<?php	the_custom_logo(); ?>
+					</div>
+				</div>
+				<nav class="main-menu clearfix">
 					<?php
 						wp_nav_menu( array(
 							'theme_location' => 'menu-1',
@@ -39,25 +54,12 @@
 						) );
 					?>
 				</nav>
-			</div>
-			<div class="logo-box">
-				<div class="site-branding">
-					<?php	the_custom_logo(); ?>
+				<div class="contacts-box">
+					<a href="tel:89255107239">
+						<span class="phone_icon"></span>
+						<span class="phone_text">8 (925) 510-72-35</span>
+					</a>
 				</div>
-			</div>
-			<nav class="main-menu clearfix">
-				<?php
-					wp_nav_menu( array(
-						'theme_location' => 'menu-1',
-						'menu_id'        => 'primary-menu',
-					) );
-				?>
-			</nav>
-			<div class="contacts-box">
-				<a href="tel:89255107239">
-					<span class="phone_icon"></span>
-					<span class="phone_text">8 (925) 510-72-35</span>
-				</a>
 			</div>
 		</div>
 	</div>
@@ -89,6 +91,7 @@
   </div>
 	<div id="follow-box">
 		<a class="follow_button" href="#next">Вниз</a>
+		<span id="next"></span>
 	</div>
 </header>
 <main class="main">
@@ -129,7 +132,7 @@
       </div>
     </div>
   </section>
-  <section id="next" class="main-advantages">
+  <section class="main-advantages">
     <div class="container">
       <h2>
         Игра «Федерация»:

@@ -324,6 +324,10 @@ main.main {
   background-size: cover;
 }
 
+.main-header__top-box {
+  min-height: 70px;
+}
+
 .main-header .container,
 .top-header {
   position: relative;
@@ -451,11 +455,6 @@ header .contacts-box .phone_text {
   animation-duration: 1s;
   background: linear-gradient(to bottom, rgba(58, 117, 196, 1), rgba(17, 146, 208, 1));
   box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.35);
-}
-
-.main-header.lowered {
-  margin-top: 55px;
-  padding-top: 2.5em;
 }
 
 .header__video-wrapp {
@@ -1401,11 +1400,6 @@ footer .social_tw {
 
   .main-header {
     min-height: 555px;
-  }
-
-  .main-header.lowered {
-    margin-top: 70px;
-    padding-top: 9em;
   }
 
   .header__video-wrapp video {
