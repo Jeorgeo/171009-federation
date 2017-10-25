@@ -888,6 +888,10 @@ footer .box-social .social-icons a {
   text-transform: uppercase;
 }
 
+.rules-order .big-text {
+  line-height: 1.75em;
+}
+
 .box-form {
   padding: 0.5em 0 1em 0;
   background-color: #fefeff;

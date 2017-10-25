@@ -120,7 +120,9 @@ get_header(); ?>
 			<div class="row clearfix">
 				<div class="cols col-6 col-6-md wrap-box">
 					<span class="big-text">
-						Вы можете заказать игру на нашем сайте, заполнив форму ниже. Доставка в любую точку России в подарок!
+						Вы можете заказать игру на нашем сайте,<br>
+						заполнив форму ниже.<br>
+						Доставка в любую точку России в подарок!
 					</span>
 					<div class="wow slideInLeft box-form">
 						<form class="main-form" action="index.html" method="post">
