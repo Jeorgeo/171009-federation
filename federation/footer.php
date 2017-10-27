@@ -14,26 +14,20 @@
 <footer>
 	<div class="container clearfix">
 		<div class="contacts-box phone">
-			<a href="tel:89255107239">
-				<span class="phone_icon"></span>
-				<span class="phone_text">8 (925) 510-72-35</span>
-			</a>
+			<?php dynamic_sidebar( 'phone' ); ?>
 		</div>
 		<div class="footer-right">
 			<div class="contacts-box">
-				<a href="mailto:igra@gmail.com">
-					<span class="mail_icon"></span>
-					<span class="mail_text">igra@gmail.com</span>
-				</a>
+				<?php dynamic_sidebar( 'mail' ); ?>
 			</div>
 			<a class="policy" href="<?php echo the_field('policy'); ?>" target="_blank">Политика конфиденциальности</a>
 		</div>
 		<div class="footer-center">
 			<div class="box-social">
-				<span class="social-icons social_vk"><a href="https://vk.com/id402797950">В контакте</a></span>
-				<span class="social-icons social_instagram"><a href="https://www.instagram.com/rusfedgame">Инстаграмм</a></span>
-				<span class="social-icons social_ok"><a href="https://ok.ru/profile/570383914077">Одноклассники</a></span>
-				<span class="social-icons social_tw"><a href="https://twitter.com/rfigra">Твиттер</a></span>
+				<?php dynamic_sidebar( 'social_vk' ); ?>
+				<?php dynamic_sidebar( 'social_instagram' ); ?>
+				<?php dynamic_sidebar( 'social_ok' ); ?>
+				<?php dynamic_sidebar( 'social_tw' ); ?>
 			</div>
 			<p class="box-copy">
 				© Игра «Федерация», 2017

@@ -55,10 +55,7 @@
 					?>
 				</nav>
 				<div class="contacts-box">
-					<a href="tel:89255107239">
-						<span class="phone_icon"></span>
-						<span class="phone_text">8 (925) 510-72-35</span>
-					</a>
+					<?php dynamic_sidebar( 'phone' ); ?>
 				</div>
 			</div>
 		</div>
@@ -98,15 +95,7 @@
   <section class="main-intro">
     <div class="row container clearfix">
       <div class="cols col-4 col-6-md wrap-box">
-        <h3>
-          Мы любим путешествовать по разным странам и открывать для себя новые города.
-        </h3>
-        <span class="big-text">
-          А на сколько хорошо мы знаем свою любимую Россию?
-        </span>
-        <p>
-          Мы живем в стране, территория которой, самая большая в мире. Жаль, что многие из нас знают, где находится Неаполь или Нью-Йорк, но не знают регионы и города своей бескрайней Родины...
-        </p>
+        <?php echo the_field('pole1'); ?>
       </div>
       <div class="cols col-7 col-6-md float_right">
         <a href="#" class="video_frame <?php echo the_field('link2'); ?>">
@@ -117,15 +106,7 @@
     </div>
     <div class="row container clearfix">
       <div class="cols col-7 col-6-md wrap-box float_right">
-        <p>
-          Игра «Федерация» открывает всем, не зависимо от возраста, возможность изучить города и регионы России.
-        </p>
-        <p>
-          Играя вам не будет скучно, как это часто происходит на уроках географии, наоборот вы полностью будете увлечены игровым процессом.
-        </p>
-        <span class="big-text">
-          Мы вам это гарантируем!
-        </span>
+        <?php echo the_field('pole2'); ?>
       </div>
       <div class="cols col-4 col-6-md">
         <img src="<?php bloginfo('template_url'); ?>/pics/fed_main-game.jpg" alt="Игра «Федерация»">
@@ -158,19 +139,30 @@
       </h2>
       	<div class="main-slider">
 					<div class="slider-box">
-						<!--Здесь вставляется слайдер!-->
+						<div class="slide">
+							<?php echo the_field('link5'); ?>
+						</div>
+						<div class="slide">
+							<?php echo the_field('link5'); ?>
+						</div>
+						<div class="slide">
+							<?php echo the_field('link5'); ?>
+						</div>
+						<div class="slide">
+							<?php echo the_field('link5'); ?>
+						</div>
 					</div>
 				</div>
       </div>
       <p class="meet-social">
         Присоединяйтесь к нам в социальных сетях
       </p>
-      <div class="box-social">
-        <span class="social-icons social_vk"><a href="https://vk.com/id402797950">В контакте</a></span>
-        <span class="social-icons social_instagram"><a href="https://www.instagram.com/rusfedgame">Инстаграмм</a></span>
-        <span class="social-icons social_ok"><a href="https://ok.ru/profile/570383914077">Одноклассники</a></span>
-        <span class="social-icons social_tw"><a href="https://twitter.com/rfigra">Твиттер</a></span>
-      </div>
+			<div class="box-social">
+				<?php dynamic_sidebar( 'social_vk' ); ?>
+				<?php dynamic_sidebar( 'social_instagram' ); ?>
+				<?php dynamic_sidebar( 'social_ok' ); ?>
+				<?php dynamic_sidebar( 'social_tw' ); ?>
+			</div>
     </div>
   </section>
   <section class="main-steps">
@@ -180,43 +172,43 @@
         <figure class="main-step step-1">
           <img src="<?php bloginfo('template_url'); ?>/img/fed_main-icon-process1.png" alt="">
           <p>
-            Каждой клетке с названием региона соответствует карта с названием его административного центра (города
-          </p>
+            <?php echo the_field('step1'); ?>
+					</p>
           <span>1</span>
         </figure>
         <figure class="main-step step-2">
           <img src="<?php bloginfo('template_url'); ?>/img/fed_main-icon-process2.png" alt="">
-          <p>
-            У каждого игрока на руках фишки и 6 карт. Когда подходит его очередь, игрок открывает одну из своих карт
-          </p>
+					<p>
+            <?php echo the_field('step2'); ?>
+					</p>
           <span>2</span>
         </figure>
         <figure class="main-step step-3">
           <img src="<?php bloginfo('template_url'); ?>/img/fed_main-icon-process3.png" alt="">
-          <p>
-            Открыв карту с названием города, игрок ставит фишку на клетку с соответствующим регионом на поле.  Открытая карта сбрасывается.
-          </p>
+					<p>
+            <?php echo the_field('step3'); ?>
+					</p>
           <span>3</span>
         </figure>
         <figure class="main-step step-4">
           <img src="<?php bloginfo('template_url'); ?>/img/fed_main-icon-process4.png" alt="">
-          <p>
-            Затем игрок берет новую карту из общей колоды, взамен сброшенной, после чего ход переходит к следующему игроку.
-          </p>
+					<p>
+            <?php echo the_field('step4'); ?>
+					</p>
           <span>4</span>
         </figure>
         <figure class="main-step step-5">
           <img src="<?php bloginfo('template_url'); ?>/img/fed_main-icon-process5.png" alt="">
-          <p>
-            По ходу игры поле заполняется фишками разных цветов. Ряд из шести фишек одного цвета называется суперлинией.
-          </p>
+					<p>
+            <?php echo the_field('step5'); ?>
+					</p>
           <span>5</span>
         </figure>
         <figure class="main-step victory">
           <img src="<?php bloginfo('template_url'); ?>/pics/fed_main-victory.png" alt="">
-          <p>
-            Побеждает та команда или игрок, которые первыми построили три суперлинии.
-          </p>
+					<p>
+            <?php echo the_field('step6'); ?>
+					</p>
         </figure>
       </div>
       <div class="pc-version">
@@ -224,47 +216,47 @@
           <div class="cols col-4">
             <figure class="wow fadeInLeft main-step step-2" data-wow-duration="2.5s">
               <img src="<?php bloginfo('template_url'); ?>/img/fed_main-icon-process2.png" alt="">
-              <p>
-                У каждого игрока на руках фишки и 6 карт. Когда подходит его очередь, игрок открывает одну из своих карт
-              </p>
+							<p>
+		            <?php echo the_field('step2'); ?>
+							</p>
               <span>2</span>
             </figure>
             <figure class="wow fadeInLeft main-step step-1" data-wow-duration="2.5s">
               <img src="<?php bloginfo('template_url'); ?>/img/fed_main-icon-process1.png" alt="">
-              <p>
-                Каждой клетке с названием региона соответствует карта с названием его административного центра (города
-              </p>
+							<p>
+		            <?php echo the_field('step1'); ?>
+							</p>
               <span>1</span>
             </figure>
           </div>
           <div class="cols col-4">
             <figure class="wow fadeInDown main-step step-3" data-wow-duration="1.5s">
               <img src="<?php bloginfo('template_url'); ?>/img/fed_main-icon-process3.png" alt="">
-              <p>
-                Открыв карту с названием города, игрок ставит фишку на клетку с соответствующим регионом на поле.  Открытая карта сбрасывается.
-              </p>
+							<p>
+		            <?php echo the_field('step3'); ?>
+							</p>
               <span>3</span>
             </figure>
             <figure class="wow fadeInUp main-step victory" data-wow-duration="1.5s">
               <img src="<?php bloginfo('template_url'); ?>/pics/fed_main-victory.png" alt="">
-              <p>
-                Побеждает та команда или игрок, которые первыми построили три суперлинии.
-              </p>
+							<p>
+		            <?php echo the_field('step6'); ?>
+							</p>
             </figure>
           </div>
           <div class="cols col-4">
             <figure class="wow fadeInRight main-step step-4" data-wow-duration="1.5s">
               <img src="<?php bloginfo('template_url'); ?>/img/fed_main-icon-process4.png" alt="">
-              <p>
-                Затем игрок берет новую карту из общей колоды, взамен сброшенной, после чего ход переходит к следующему игроку.
-              </p>
+							<p>
+		            <?php echo the_field('step4'); ?>
+							</p>
               <span>4</span>
             </figure>
             <figure class="wow fadeInRight main-step step-5" data-wow-duration="1.5s">
               <img src="<?php bloginfo('template_url'); ?>/img/fed_main-icon-process5.png" alt="">
-              <p>
-                По ходу игры поле заполняется фишками разных цветов. Ряд из шести фишек одного цвета называется суперлинией.
-              </p>
+							<p>
+		            <?php echo the_field('step5'); ?>
+							</p>
               <span>5</span>
             </figure>
           </div>
@@ -294,7 +286,7 @@
         <div class="cols col-5 col-6-md wrap-box">
           <p class="box-meet">
             <span class="big-text">
-              Где бы Вы ни были, в любой точке нашей необъятной Родины, мы позаботимся, чтобы игра оказалась у Вас в идеальном состоянии.  Стоимость доставки мы берём на себя.
+		            <?php echo the_field('order'); ?>
             </span>
           </p>
         </div>
@@ -320,55 +312,6 @@
   </section>
 </main>
 
-<template id="img_slider" style="display: none;">
-	<div class="slide">
-		<img class="temlate-img" src="" alt="">
-	</div>
-</template>
-
-<?php
-
-function get_vk_browser($url='',$uagent=''){
-	if(empty($uagent)){$uagent = "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)";}
-	$ch = curl_init( $url );
-	curl_setopt($ch, CURLOPT_URL, $url);
-	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-	curl_setopt($ch, CURLOPT_HEADER, 0);
-	curl_setopt($ch, CURLOPT_ENCODING, "");
-	curl_setopt($ch, CURLOPT_USERAGENT, $uagent);  // useragent
-	curl_setopt($ch, CURLOPT_TIMEOUT, 30);
-	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-	curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
-	$err = curl_errno( $ch );
-	if(!empty($err)){
-		$html='';
-	}
-	$html = curl_exec($ch);
-	curl_close( $ch );
-	return $html;
-};
-
-	$token = '1bfc828742cd6bf2de9adf82d27921b19f671cb73ca65327daacd6f15be9270f38f8bda82b06a7f8090a8';
-	$board_getComments = 'https://api.vk.com/method/photos.get?owner_id=-154864687&album_id=247785027&count=100&access_token='.$token.'&v=5.68';
-	$board_getComments_result = get_vk_browser($board_getComments);
-?>
-
-<script type="text/javascript">
-var sliderListElement = document.querySelector('.slider-box');
-var slideTemplate = document.querySelector('#img_slider').content;
-var album = '<?php echo $board_getComments_result;?>';
-var data = eval("(" + album + ")");
-var sliderCount = data.response.count;
-var sliderArr = data.response.items;
-
-for (var i = 0; i < sliderCount; i++) {
-  var slideElement = slideTemplate.cloneNode(true);
-	slideElementCurrent = slideElement.querySelector('.temlate-img');
-	slideElementCurrent.src = sliderArr[i].photo_604;
-  sliderListElement.appendChild(slideElement);
-}
-
-</script>
 
 <?php
 get_footer();
