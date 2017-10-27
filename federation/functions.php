@@ -110,6 +110,62 @@ function federation_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'social_vk', 'federation' ),
+		'id'            => 'social_vk',
+		'description'   => esc_html__( 'Add widgets here.', 'federation' ),
+		'before_widget' => '<span class="social-icons social_vk">',
+		'after_widget'  => '</span>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'social_instagram', 'federation' ),
+		'id'            => 'social_instagram',
+		'description'   => esc_html__( 'Add widgets here.', 'federation' ),
+		'before_widget' => '<span class="social-icons social_instagram">',
+		'after_widget'  => '</span>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'social_ok', 'federation' ),
+		'id'            => 'social_ok',
+		'description'   => esc_html__( 'Add widgets here.', 'federation' ),
+		'before_widget' => '<span class="social-icons social_ok">',
+		'after_widget'  => '</span>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'social_tw', 'federation' ),
+		'id'            => 'social_tw',
+		'description'   => esc_html__( 'Add widgets here.', 'federation' ),
+		'before_widget' => '<span class="social-icons social_tw">',
+		'after_widget'  => '</span>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'phone', 'federation' ),
+		'id'            => 'phone',
+		'description'   => esc_html__( 'Add widgets here.', 'federation' ),
+		'before_widget' => '<div class="contacts-box" style="margin: 0;">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'mail', 'federation' ),
+		'id'            => 'mail',
+		'description'   => esc_html__( 'Add widgets here.', 'federation' ),
+		'before_widget' => '<div class="contacts-box">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+
+
 }
 add_action( 'widgets_init', 'federation_widgets_init' );
 

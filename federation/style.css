@@ -348,7 +348,11 @@ main.main {
   text-transform: uppercase;
 }
 
-.menu a:hover {
+.menu a:hover,
+.contacts-box a:hover,
+header .contacts-box a:hover .phone_text,
+.box-production a:hover,
+.policy:hover {
   color: #20286b;
 }
 
@@ -367,7 +371,7 @@ header .contacts-box .phone_icon {
   display: block;
   width: 30px;
   height: 30px;
-  background: url('img/fed_main-icon-phone.png') no-repeat 50% 50%;
+  background: url('img/spritesheet.png') no-repeat -173px -34px;
   background-size: contain;
 }
 
@@ -396,6 +400,16 @@ header .contacts-box .phone_text {
   width: 100%;
   text-align: center;
   color: #ffffff;
+}
+
+.bottom-header a {
+  outline: none;
+}
+
+.bottom-header a:hover,
+a:hover .btn-play,
+.follow_button:hover {
+  opacity: 0.8;
 }
 
 .bottom-header a .video_text {
@@ -509,6 +523,7 @@ header .contacts-box .phone_text {
   animation-name:hidden-panel;
   animation-duration: 0.8s;
   left: -80%;
+  box-shadow: 0 0 7px 3px rgba(0, 0, 0, 0.35);
 }
 
 .left-panel.left-panel-show {
@@ -682,64 +697,6 @@ h2,
   font-weight: bold;
 }
 
-.main-slider {
-  position: relative;
-  height: 360px;
-}
-
-.slick-slider {
-  position: static;
-}
-
-.slick-arrow {
-  position: absolute;
-  bottom: 0;
-  display: none;
-  width: 46px;
-  height: 46px;
-  margin: 1em 0.5em;
-  font-size: 0;
-  background-color: #ffffff;
-  border: 1px solid #ffffff;
-  border-radius: 50%;
-  outline: none;
-}
-
-.slick-arrow:hover {
-  cursor: pointer;
-  border: 1px solid #ffffff;
-}
-
-.slick-arrow::after,
-.slick-arrow::before {
-  position: absolute;
-  top: 17px;
-  left: 18px;
-  display: block;
-  width: 12px;
-  height: 2px;
-  background-color: #ffd09c;
-  content: '';
-}
-
-.slick-arrow::after {
-  transform: rotate(45deg);
-}
-
-.slick-arrow::before {
-  transform: rotate(-45deg);
-    top: 25px;
-}
-
-.slick-arrow.slick-prev {
-  left: 30%;
-  transform: rotate(-180deg);
-}
-
-.slick-arrow.slick-next {
-  right: 30%;
-}
-
 .main-life {
   font-size: 1.3em;
   font-weight: bold;
@@ -766,23 +723,22 @@ footer .box-social .social-icons a {
 }
 
 .main-life .social_vk {
-  background: url('img/fed_icon-main-vk.png') no-repeat 50% 50%;
-  background-size: contain;
+  background: url('img/spritesheet.png') no-repeat -61px -115px;
 }
 
 .main-life .social_instagram {
-  background: url('img/fed_icon-main-ins.png') no-repeat 50% 50%;
-  background-size: contain;
+  background: url('img/spritesheet.png') no-repeat -116px -5px;
+
 }
 
 .main-life .social_ok {
-  background: url('img/fed_icon-main-ok.png') no-repeat 50% 50%;
-  background-size: contain;
+  background: url('img/spritesheet.png') no-repeat -117px -60px;
+
 }
 
 .main-life .social_tw {
-  background: url('img/fed_icon-main-tw.png') no-repeat 50% 50%;
-  background-size: contain;
+  background: url('img/spritesheet.png') no-repeat -5px -115px;
+
 }
 
 .main-step {
@@ -1092,6 +1048,71 @@ footer .box-social .social-icons a {
 
 /*----------slider--------------------*/
 
+.main-slider {
+  position: relative;
+  height: 360px;
+}
+
+.slick-slider {
+  position: static;
+}
+
+.slick-arrow {
+  position: absolute;
+  bottom: 0;
+  display: none;
+  width: 46px;
+  height: 46px;
+  margin: 1em 0.5em;
+  font-size: 0;
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 0 5px 2px #dbdbe1;
+  outline: none;
+}
+
+.slick-arrow:hover {
+  cursor: pointer;
+  border: 1px solid #ffd09c;
+  box-shadow: none;
+}
+
+.slick-arrow::after,
+.slick-arrow::before {
+  position: absolute;
+  top: 17px;
+  left: 18px;
+  display: block;
+  width: 12px;
+  height: 2px;
+  background-color: #ffd09c;
+  content: '';
+}
+
+.slick-arrow::after {
+  transform: rotate(45deg);
+}
+
+.slick-arrow::before {
+  transform: rotate(-45deg);
+    top: 25px;
+}
+
+.slick-arrow.slick-prev {
+  position: absolute;
+  z-index: 9999;
+  left: 30%;
+  transform: rotate(-180deg);
+}
+
+.slick-arrow.slick-next {
+  right: 30%;
+}
+
+.slick-list {
+  padding: 1em 0 3em 0!important;
+}
 
 .slick-slide img {
   width: 80%;
@@ -1103,7 +1124,7 @@ footer .box-social .social-icons a {
 }
 
 .slick-slide.slick-center img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
   margin-top: 0;
   animation-name: swell;
@@ -1111,9 +1132,6 @@ footer .box-social .social-icons a {
   box-shadow: 0 0 25px 5px #c4c4ca;;
 }
 
-.slick-list {
-  padding: 1em 0 3em 0!important;
-}
 
 /*--------------------------------------------------------------
 # Footer
@@ -1137,13 +1155,13 @@ footer .contacts-box .mail_icon {
   width: 30px;
   height: 30px;
   margin-top: 0.1em;
-  background: url('img/fed_main-icon-phone.png') no-repeat 50% 50%;
-  background-size: contain;
+  background: url('img/spritesheet.png') no-repeat -170px -31px;
+
 }
 
 footer .contacts-box .mail_icon {
-  background: url('img/fed_main-icon-mail.png') no-repeat 50% 50%;
-  background-size: contain;
+  background: url('img/spritesheet.png') no-repeat -170px 1px;
+
 }
 
 footer .contacts-box .phone_text,
@@ -1160,23 +1178,19 @@ footer .contacts-box .mail_text {
 }
 
 footer .social_vk {
-  background: url('img/fed_icon-header-vk.png') no-repeat 50% 50%;
-  background-size: contain;
+  background: url('img/spritesheet.png') no-repeat -61px -60px;
 }
 
 footer .social_instagram {
-  background: url('img/fed_icon-header-ins.png') no-repeat 50% 50%;
-  background-size: contain;
+  background: url('img/spritesheet.png') no-repeat -5px -5px;
 }
 
 footer .social_ok {
-  background: url('img/fed_icon-header-ok.png') no-repeat 50% 50%;
-  background-size: contain;
+  background: url('img/spritesheet.png') no-repeat -60px -5px;
 }
 
 footer .social_tw {
-  background: url('img/fed_icon-header-tw.png') no-repeat 50% 50%;
-  background-size: contain;
+  background: url('img/spritesheet.png') no-repeat -5px -60px;
 }
 
 .footer-right .policy,
@@ -1290,7 +1304,7 @@ footer .social_tw {
   }
 
   .box-form {
-    width: 80%;
+    width: 100%;
     max-width: 400px;
     background: rgba(255, 255, 255, 0.85);
     box-shadow: 0 0 25px 10px #e5e5eb;
@@ -1860,5 +1874,9 @@ footer .social_tw {
   .header__video-wrapp {
     top: -30%;
     height: 130%;
+  }
+
+  .main-header {
+    min-height: 600px;
   }
 }

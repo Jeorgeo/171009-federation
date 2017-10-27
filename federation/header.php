@@ -52,10 +52,7 @@
 					?>
 				</nav>
 				<div class="contacts-box">
-					<a href="tel:89255107239">
-						<span class="phone_icon"></span>
-						<span class="phone_text">8 (925) 510-72-35</span>
-					</a>
+					<?php dynamic_sidebar( 'phone' ); ?>
 				</div>
 			</div>
 		</div>

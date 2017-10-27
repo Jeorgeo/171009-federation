@@ -35,12 +35,7 @@ $news = get_posts(
 <main class="partners">
 	<section class="partners-list">
 		<div class="container">
-			<h2>
-				Партнеры игры
-			</h2>
-			<p> <span class="strong-text">
-				Генеральный партнер – Мосигра  (mosigra.ru)
-			</span>
+			<?php echo the_field('partners'); ?>
 			</p>
 			<h3>
 				Партнеры в городах:
@@ -66,7 +61,7 @@ $news = get_posts(
 
 
 			</div>
-			<a class="btn-rules btn-partners" href="#">Стать партнером</a>
+			<a class="btn-rules btn-partners" href="<?php echo the_field('link1'); ?>">Стать партнером</a>
 		</div>
 	</section>
 	<section class="partners-map">

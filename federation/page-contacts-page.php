@@ -40,12 +40,10 @@ $news = get_posts(
 			</h2>
 			<div class="row clearfix">
 				<div class="cols col-4">
-					<p><span class="strong-text">Телефон:</span> 8 (925) 510-72-35<br>
-					<span class="strong-text">E-mail:</span> rf-igra@mail.ru</p>
+					<?php echo the_field('phone_mail'); ?>
 				</div>
-				<div class="cols col-5">
-					<p><span class="strong-text">Адрес:</span> Россия, г. Москва, <br>
-					Бизнес парк «Румянцево», корпус Е, офис 620</p>
+				<div class="cols col-8">
+					<?php echo the_field('adress'); ?>
 				</div>
 			</div>
 			<h3>
