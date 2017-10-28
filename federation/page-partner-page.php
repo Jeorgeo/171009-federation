@@ -56,6 +56,11 @@ get_header(); ?>
 							<h4>
 								Оставить заявку
 							</h4>
+							<!-- Hidden Required Fields -->
+							<input type="hidden" name="project_name" value="рф-игра.рф">
+							<input type="hidden" name="admin_email" value="jeorgeo@list.ru">
+							<input type="hidden" name="form_subject" value="Заявка в партнеры">
+							<!-- END Hidden Required Fields -->
 							<input type="text" name="name" value="" placeholder="ФИО*">
 							<input id="phone" type="text" name="phone" value="" placeholder="Контактный телефон*">
 							<input type="text" name="email" value="" placeholder="E-mail*" pattern="^([A-Za-z0-9_\.\-]{1,20})@([a-z0-9\.\-]{1,20})\.([a-z]{2,4})">
@@ -67,6 +72,15 @@ get_header(); ?>
 			</div>
 		</div>
 	</section>
+	<div class="wrap"></div>
+	<div class="popup-question">
+		<div class="popup-question-close">
+	    close
+	  </div>
+	  <div class="box-content">
+	  	<?php dynamic_sidebar( 'thanks' ); ?>
+	  </div>
+	</div>
 </main>
 
 <?php

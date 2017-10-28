@@ -28,6 +28,7 @@
 				<?php dynamic_sidebar( 'social_instagram' ); ?>
 				<?php dynamic_sidebar( 'social_ok' ); ?>
 				<?php dynamic_sidebar( 'social_tw' ); ?>
+				<?php dynamic_sidebar( 'social_tel' ); ?>
 			</div>
 			<p class="box-copy">
 				© Игра «Федерация», 2017

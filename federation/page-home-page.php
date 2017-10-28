@@ -26,20 +26,22 @@
 </head>
 <header class="main-header">
 	<div class="main-header__top-box">
+		<div class="left-panel">
+			<div class="container">
+				<nav class="mobile-menu">
+					<?php
+						wp_nav_menu( array(
+							'theme_location' => 'menu-1',
+							'menu_id'        => 'primary-menu',
+						) );
+					?>
+				</nav>
+			</div>
+		</div>
 		<div class="top-header main-top-header">
 			<div class="container clearfix">
-				<div class="left-panel">
-					<div id="js-toggle" class="left-panel__menu-toggle">
-						<button class="header-menu-toggle"><span>menu</span></button>
-					</div>
-					<nav class="mobile-menu">
-						<?php
-							wp_nav_menu( array(
-								'theme_location' => 'menu-1',
-								'menu_id'        => 'primary-menu',
-							) );
-						?>
-					</nav>
+				<div id="js-toggle" class="left-panel__menu-toggle">
+					<button class="header-menu-toggle"><span>menu</span></button>
 				</div>
 				<div class="logo-box">
 					<div class="site-branding">
@@ -72,7 +74,7 @@
   </div>
   <div class="bottom-header">
 		<div class="container">
-			<a href="#" class="<?php echo the_field('link1'); ?>">
+			<a href="<?php echo the_field('link1'); ?>" class="popup-link">
 	      <span class="video_text">Смотреть<br> видео</span>
 	      <span class="video_btn"></span>
 	    </a>
@@ -98,7 +100,7 @@
         <?php echo the_field('pole1'); ?>
       </div>
       <div class="cols col-7 col-6-md float_right">
-        <a href="#" class="video_frame <?php echo the_field('link2'); ?>">
+        <a href="<?php echo the_field('link2'); ?>" class="video_frame popup-link">
           <img src="<?php bloginfo('template_url'); ?>/pics/fed_main-map.jpg" alt="Карта России">
           <span class="btn-play">play</span>
         </a>
@@ -162,6 +164,7 @@
 				<?php dynamic_sidebar( 'social_instagram' ); ?>
 				<?php dynamic_sidebar( 'social_ok' ); ?>
 				<?php dynamic_sidebar( 'social_tw' ); ?>
+				<?php dynamic_sidebar( 'social_tel' ); ?>
 			</div>
     </div>
   </section>
@@ -272,7 +275,7 @@
         <a class="btn-rules" href="<?php echo the_field('link4'); ?>" target="_blank">Правила игры</a>
       </div>
       <div class="cols col-7 col-6-md float_right">
-        <a class="video_frame <?php echo the_field('link3'); ?>" href="#">
+        <a class="video_frame popup-link" href="<?php echo the_field('link3'); ?>">
           <img src="<?php bloginfo('template_url'); ?>/pics/fed_main-video.jpg" alt="Правила игры">
           <span class="btn-play">play</span>
         </a>
@@ -310,6 +313,11 @@
       </div>
     </div>
   </section>
+	<div class="popup-box">
+		<video class="popup__video" autoplay controls>
+				<source src="" type="video/mp4">
+	 </video>
+	</div>
 </main>
 
 

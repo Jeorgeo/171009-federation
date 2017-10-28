@@ -147,6 +147,15 @@ function federation_widgets_init() {
 		'after_title'   => '</h2>',
 	) );
 	register_sidebar( array(
+		'name'          => esc_html__( 'social_telegram', 'federation' ),
+		'id'            => 'social_tel',
+		'description'   => esc_html__( 'Add widgets here.', 'federation' ),
+		'before_widget' => '<span class="social-icons social_tel">',
+		'after_widget'  => '</span>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+	register_sidebar( array(
 		'name'          => esc_html__( 'phone', 'federation' ),
 		'id'            => 'phone',
 		'description'   => esc_html__( 'Add widgets here.', 'federation' ),
@@ -160,6 +169,15 @@ function federation_widgets_init() {
 		'id'            => 'mail',
 		'description'   => esc_html__( 'Add widgets here.', 'federation' ),
 		'before_widget' => '<div class="contacts-box">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'thanks', 'federation' ),
+		'id'            => 'thanks',
+		'description'   => esc_html__( 'Add widgets here.', 'federation' ),
+		'before_widget' => '<div>',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',

@@ -31,6 +31,9 @@ $(window).scroll(function() {
     }
 
 });
+
+//scroll
+
 $("a[href*=#]").on("click", function(e){
         var anchor = $(this);
         $('html, body').stop().animate({
@@ -41,6 +44,8 @@ $("a[href*=#]").on("click", function(e){
     });
 
 });
+
+//mobile-menu
 
 var toggleBtn = document.querySelector('#js-toggle');
 var menuNav = document.querySelector('.left-panel');
@@ -59,3 +64,88 @@ function moveMenu(){
       menuNav.classList.add('left-panel-show');
       }
 };
+
+// popup windows
+
+var popup = document.querySelector(".popup-question")
+var close = document.querySelector(".popup-question-close");
+var winPopup = document.querySelector(".wrap");
+
+function showThank() {
+  winPopup.classList.add("modal-content-show");
+  popup.classList.add("modal-content-show");
+  setTimeout(function() {
+    popup.classList.add("modal-content-hide");
+    winPopup.classList.add("modal-content-hide");
+  }, 3000);
+  setTimeout(function() {
+    popup.classList.remove("modal-content-show");
+    winPopup.classList.remove("modal-content-show");
+    popup.classList.remove("modal-content-hide");
+    winPopup.classList.remove("modal-content-hide");
+  }, 3500);
+};
+
+function removePopup() {
+  popup.classList.add("modal-content-hide");
+  winPopup.classList.add("modal-content-hide");
+  setTimeout(function() {
+    popup.classList.remove("modal-content-show");
+    winPopup.classList.remove("modal-content-show");
+    popup.classList.remove("modal-content-hide");
+    winPopup.classList.remove("modal-content-hide");
+  }, 600);
+
+};
+
+
+
+  close.addEventListener("click", function(event) {
+
+    event.preventDefault();
+
+    removePopup();
+
+  });
+
+
+window.addEventListener("keydown", function(event) {
+
+  if (event.keyCode === 27) {
+
+    if (popup.classList.contains("modal-content-show")) {
+
+      removePopup();
+
+    }
+
+  }
+
+});
+
+winPopup.addEventListener("click", function(event) {
+
+  if (winPopup.classList.contains("modal-content-show")) {
+
+    removePopup();
+
+  }
+
+});
+
+$(document).ready(function() {
+
+	//E-mail Ajax Send
+	$(".main-form").submit(function() { //Change
+		var th = $(this).serialize();
+		$.ajax({
+			type: "POST",
+			url: "http://рф-игра.рф/post.php", //Change
+			data: th,
+		}).done(function() {
+			showThank();
+		});
+		return false;
+	});
+
+});
