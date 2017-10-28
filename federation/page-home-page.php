@@ -313,10 +313,12 @@
       </div>
     </div>
   </section>
-	<div class="popup-box">
-		<video class="popup__video" autoplay controls>
-				<source src="" type="video/mp4">
-	 </video>
+	<div class="wrap"></div>
+	<div class="video-box popup-question">
+		<div class="popup-question-close">
+	    close
+	  </div>
+		
 	</div>
 </main>
 

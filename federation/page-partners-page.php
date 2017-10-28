@@ -66,9 +66,7 @@ $news = get_posts(
 	</section>
 	<section class="partners-map">
 		<div class="container">
-			<h2>
-				Карта
-			</h2>
+			
 			<div class="map-box clearfix">
 				<?php echo the_field('map'); ?>
 			</div>

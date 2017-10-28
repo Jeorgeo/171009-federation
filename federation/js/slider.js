@@ -70,6 +70,34 @@ function moveMenu(){
 var popup = document.querySelector(".popup-question")
 var close = document.querySelector(".popup-question-close");
 var winPopup = document.querySelector(".wrap");
+var videoLink = document.querySelectorAll(".popup-link");
+var i = 0;
+var k = 0;
+var x = 0;
+var y = 0;
+var w = videoLink.length;
+
+for (var k = 0; k < w; k++) {
+  videoLink[k].addEventListener('click', function(evt) {
+     evt.preventDefault();
+     var current = evt.currentTarget;
+     if (current.classList.contains("popup-link")) {
+     var m = w;
+     while(m--) {
+        if(videoLink[m] == current) {
+           var y = m;
+           break;
+        }
+     }
+     popup.classList.add("modal-content-show");
+     winPopup.classList.add("modal-content-show");
+     videoBox = '<video class="popup__video" autoplay controls><source src="' + videoLink[y].href + '" type="video/mp4"><source src="' + videoLink[y].href + '"type="video/webm"></video>';
+     popup.insertAdjacentHTML('afterbegin', videoBox);
+   } else {
+      evt.preventDefault();
+     }
+  });
+};
 
 function showThank() {
   winPopup.classList.add("modal-content-show");
@@ -87,6 +115,10 @@ function showThank() {
 };
 
 function removePopup() {
+  var videoScreen = popup.querySelector("video");
+  var removeScreen = videoScreen.querySelector("source");
+  removeScreen.src = "#";
+  popup.removeChild(videoScreen);
   popup.classList.add("modal-content-hide");
   winPopup.classList.add("modal-content-hide");
   setTimeout(function() {
