@@ -58,7 +58,7 @@ get_header(); ?>
 							</h4>
 							<!-- Hidden Required Fields -->
 							<input type="hidden" name="project_name" value="рф-игра.рф">
-							<input type="hidden" name="admin_email" value="jeorgeo@list.ru">
+							<input type="hidden" name="admin_email" value="rf-igra@mail.ru">
 							<input type="hidden" name="form_subject" value="Заявка в партнеры">
 							<!-- END Hidden Required Fields -->
 							<input type="text" name="name" value="" placeholder="ФИО*">

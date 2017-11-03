@@ -52,13 +52,13 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 --------------------------------------------------------------*/
 
 @keyframes show-panel {
-  from { top: -200px; }
+  from { top: -310px; }
   to   { top: 0; }
 }
 
 @keyframes hidden-panel {
   from { top: 0; }
-  to   { top: -200px; }
+  to   { top: -310px; }
 }
 
 @keyframes show-span {
@@ -178,6 +178,11 @@ ul {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+.this_link a {
+  text-decoration: underline;
+  color: #3a75c4;
 }
 
 img {
@@ -381,7 +386,7 @@ header .contacts-box a:hover .phone_text,
 
 header .contacts-box {
   position: absolute;
-  top: 7px;
+  top: 6px;
   right: 0;
 }
 
@@ -389,7 +394,8 @@ header .contacts-box .phone_icon {
   display: block;
   width: 30px;
   height: 30px;
-  background: url('img/spritesheet.png') no-repeat -205px -60px;
+  background: url('img/fed_main-icon-phone.png') no-repeat 50% 50%;
+  background-size: contain;
 }
 
 header .contacts-box .phone_text {
@@ -485,9 +491,14 @@ a:hover .btn-play,
   width: 100%;
   animation-name: show-header;
   top: 0;
+  left: 0;
   animation-duration: 1s;
   background: linear-gradient(to bottom, rgba(58, 117, 196, 1), rgba(17, 146, 208, 1));
   box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.35);
+}
+
+.top-header .container {
+  position: relative;
 }
 
 .header__video-wrapp {
@@ -548,7 +559,7 @@ a:hover .btn-play,
   background-color: #3a75c4;
   animation-name:hidden-panel;
   animation-duration: 0.8s;
-  top: -200px;
+  top: -310px;
   box-shadow: 0 0 7px 3px rgba(0, 0, 0, 0.35);
 }
 
@@ -650,7 +661,7 @@ a:hover .btn-play,
 }
 
 .mobile-menu li {
-  margin: 0.5em;
+  margin: 2em 0.5em;
 }
 
 @media screen and (min-width: 1024px) {
@@ -1196,10 +1207,9 @@ a:hover .btn-play {
   left: 0;
   right: 0;
   top: 50px;
-  bottom: 0;
   z-index: 99999;
   width: 300px;
-  min-height: 50px;
+  min-height: 300px;
   margin: 5px auto;
   padding: 1em;
   font-size: 1.2em;
@@ -1307,13 +1317,15 @@ footer .contacts-box .mail_icon {
   width: 30px;
   height: 30px;
   margin-top: 0.1em;
-  background: url('img/spritesheet.png') no-repeat -205px -57px;
+  background: url('img/fed_main-icon-phone.png') no-repeat 50% 50%;
+}
 
+footer .contacts-box .phone_icon {
+  background-size: contain;
 }
 
 footer .contacts-box .mail_icon {
   background: url('img/spritesheet.png') no-repeat -172px -53px;
-
 }
 
 footer .contacts-box .phone_text,
@@ -1928,6 +1940,11 @@ footer .social_tel {
     right: 0;
   }
 
+  .header__video-wrapp {
+    left: -7%;
+    width: 108%;
+  }
+
   /*--------------------------------------------------------------
     # Content 1280px
   --------------------------------------------------------------*/
@@ -1991,6 +2008,11 @@ footer .social_tel {
   .header__video-wrapp video {
     max-width: 100%;
     height: auto;
+  }
+
+  .header__video-wrapp {
+    left: 0;
+    width: 100%;
   }
 
   /*--------------------------------------------------------------

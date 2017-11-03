@@ -64,12 +64,7 @@
 	</div>
   <div class="middle-header">
 		<div class="container wow fadeInUp" data-wow-duration="1.5s">
-			<h1>
-	       Игра «Федерация»
-	    </h1>
-	    <p>
-	      Мы живем в самой большой стране
-      </p>
+			<?php echo the_field('header_text'); ?>
 		</div>
   </div>
   <div class="bottom-header">
@@ -318,7 +313,7 @@
 		<div class="popup-question-close">
 	    close
 	  </div>
-		
+
 	</div>
 </main>
 
