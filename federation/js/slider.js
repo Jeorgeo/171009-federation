@@ -153,6 +153,8 @@ window.addEventListener("keydown", function(event) {
 
       removePopup();
 
+      removeVideo()
+
     }
 
   }
@@ -164,6 +166,8 @@ winPopup.addEventListener("click", function(event) {
   if (winPopup.classList.contains("modal-content-show")) {
 
     removePopup();
+    
+    removeVideo()
 
   }
 
