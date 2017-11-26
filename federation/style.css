@@ -367,8 +367,10 @@ main.main {
 }
 
 .menu li {
-  font-size: 0.9em;
+  font-size: 1.1em;
   text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 4px;
 }
 
 .menu a:hover,
@@ -689,8 +691,10 @@ a:hover .btn-play,
 h2,
 .main h4,
 .rules .main-form h4,
-.partner .main-form h4  {
+.partner .main-form h4,
+.order .main-form h4 {
   text-transform: uppercase;
+  text-align: center;
   font-size: 32px;
   font-weight: bold;
   font-family: 'PT Sans', 'Arial', sans-serif;
@@ -813,7 +817,7 @@ footer .box-social .social-icons a {
   font-family: 'Arial', serif;
   font-size: 150px;
   font-weight: bold;
-  opacity: 0.1;
+  opacity: 0.2;
   color: #3976c4;
 }
 
@@ -1152,7 +1156,7 @@ a:hover .btn-play {
 
 .slick-arrow.slick-prev {
   position: absolute;
-  z-index: 9999;
+  z-index: 99;
   left: 30%;
   transform: rotate(-180deg);
 }
@@ -1292,6 +1296,19 @@ a:hover .btn-play {
 .video-box .popup-question-close::after,
 .video-box .popup-question-close::before {
   background-color: #ffd09c;
+}
+
+.main-order .btn-rules {
+  width: 300px;
+}
+
+.main-order h1,
+.main-order p {
+  font-size: 2em;
+}
+
+.order .strong-text a:hover {
+  color: #3a75c4;
 }
 
 
@@ -1455,9 +1472,25 @@ footer .social_tel {
     padding-bottom: 3em;
   }
 
-  .main-order .container {
+  .main-order .container,
+  .order .container {
     background: url('img/fed_main-bg-form.png') no-repeat 50% 100%;
     background-size: contain;
+  }
+
+  .main-order .container div {
+    background-color: rgba(255, 255, 255, 0.5);
+    min-height: 350px;
+  }
+
+  .main-order .container .btn-rules {
+    background-color: #ffffff;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  .main-order .container .btn-rules:hover {
+    background-color: #3b76c4;
   }
 
   .main-order .box-meet {
@@ -1614,7 +1647,7 @@ footer .social_tel {
   }
 
   .main-menu li {
-    margin: 1.7em 0.5em;
+    margin: 1.3em 0.5em;
   }
 
   header .contacts-box {
@@ -1898,6 +1931,18 @@ footer .social_tel {
     width: 100%;
   }
 
+  .order {
+    background: url
+  }
+
+  .order .box-meet {
+    background: none;
+  }
+
+  .order .box-meet .big-text {
+    font-size: 1.7em;
+  }
+
   /*--------------------------------------------------------------
     # Footer 1024px
   --------------------------------------------------------------*/
@@ -1968,12 +2013,12 @@ footer .social_tel {
   .slick-slide.slick-center img {
     position: absolute;
     width: 480px;
-    margin-top: -27px;
+    margin-top: -4px;
     margin-left: -50px;
     animation-name: swell;
     animation-name: show-popup;
     animation-duration: 0.5s;
-    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.25);
   }
 
   .meet-social {
@@ -1992,6 +2037,14 @@ footer .social_tel {
   .partner-order {
     margin: 4em 0;
     padding-bottom: 6em;
+  }
+
+  .main-order .container div {
+    min-height: 450px;
+  }
+
+  .main-order h1, .main-order p {
+    font-size: 3em;
   }
 
   /*--------------------------------------------------------------
@@ -2062,4 +2115,9 @@ footer .social_tel {
   .main-header {
     min-height: 600px;
   }
+}
+
+#follow-box {
+  position: relative;
+  z-index: 99;
 }

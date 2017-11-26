@@ -63,7 +63,7 @@
 		</div>
 	</div>
   <div class="middle-header">
-		<div class="container wow fadeInUp" data-wow-duration="1.5s">
+		<div class="container wow fadeInUp" data-wow-duration="1.5s" style="color: transparent;">
 			<?php echo the_field('header_text'); ?>
 		</div>
   </div>
@@ -136,18 +136,7 @@
       </h2>
       	<div class="main-slider">
 					<div class="slider-box">
-						<div class="slide">
-							<?php echo the_field('link5'); ?>
-						</div>
-						<div class="slide">
-							<?php echo the_field('link5'); ?>
-						</div>
-						<div class="slide">
-							<?php echo the_field('link5'); ?>
-						</div>
-						<div class="slide">
-							<?php echo the_field('link5'); ?>
-						</div>
+						<?php echo the_field('link5'); ?>
 					</div>
 				</div>
       </div>
@@ -280,32 +269,11 @@
   <section class="main-order">
     <div class="container">
 			<a name="order"></a>
-      <div class="row clearfix">
-        <div class="cols col-5 col-6-md wrap-box">
-          <p class="box-meet">
-            <span class="big-text">
-		            <?php echo the_field('order'); ?>
-            </span>
-          </p>
-        </div>
-        <div class="cols col-5 col-6-md form-col">
-          <div class="wow fadeInRight box-form ">
-            <form class="main-form" method="post">
-              <h4>
-                Оформить заказ
-              </h4>
-              <input type="text" name="name" value="" placeholder="ФИО*">
-              <input id="phone" type="text" name="phone" value="" placeholder="Контактный телефон*">
-              <input type="text" name="email" value="" placeholder="E-mail*" pattern="^([A-Za-z0-9_\.\-]{1,20})@([a-z0-9\.\-]{1,20})\.([a-z]{2,4})">
-              <input type="text" name="adress" value="" placeholder="Адрес доставки*">
-              <span class="price">
-                Всего: 1690 руб.
-              </span>
-              <button class="box-form__btn"type="submit" name="order-btn">Перейти к оплате</button>
-            </form>
-          </div>
-        </div>
-      </div>
+			<div class="wow fadeInUp" data-wow-duration="1.5s">
+				<?php echo the_field('link7'); ?>
+				<a class="btn-rules" href="<?php echo the_field('link6'); ?>" target="_blank">Купить игру</a>
+			</div>
+
     </div>
   </section>
 	<div class="wrap"></div>
