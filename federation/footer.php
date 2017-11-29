@@ -47,7 +47,7 @@
 	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/slider.js"></script>
 	<script type="text/javascript">
    jQuery(function($){
-   $("#phone").mask("+7(999) 999-9999");
+   $("#phone").mask("79999999999");
    });
 	 </script>
 	 <script src="<?php bloginfo('template_url'); ?>/js/wow.min.js"></script>

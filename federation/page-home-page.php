@@ -15,7 +15,8 @@
 ?>
 
 <!doctype html>
-<html <?php language_attributes(); ?>>
+<!--Developed by Yury Shakhouski  !-->
+<html class="no-js" <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,6 +24,7 @@
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/slick/slick.css"/>
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/slick/slick-theme.css"/>
 	<?php wp_head(); ?>
+	<script src="<?php bloginfo('template_url'); ?>/js/modernizr-1.0.min.js"></script>
 </head>
 <header class="main-header">
 	<div class="main-header__top-box">

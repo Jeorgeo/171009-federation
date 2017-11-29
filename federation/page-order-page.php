@@ -19,7 +19,7 @@ get_header();
 <main>
   <section class="order">
     <div class="container">
-      <?php echo the_field('partners'); ?>
+      <?php echo the_field('order-title'); ?>
       <a name="order"></a>
       <div class="row clearfix">
         <div class="cols col-5 col-6-md wrap-box">
@@ -33,8 +33,9 @@ get_header();
           <?php echo get_order_form(array('wow','fadeInRight','box-form')); ?>
         </div>
       </div>
+      <?php echo the_field('order-partners'); ?>
+      <a class="btn-rules btn-partners" href="<?php echo the_field('link-partner'); ?>">Стать партнером</a>
     </div>
-    <a class="btn-rules btn-partners" href="<?php echo the_field('link-partner'); ?>">Стать партнером</a>
   </section>
 </main>
 
