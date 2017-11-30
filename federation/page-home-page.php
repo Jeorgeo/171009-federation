@@ -71,6 +71,7 @@
   </div>
   <div class="bottom-header">
 		<div class="container">
+			<p class="header_p"><?php echo the_field('header_p'); ?></p>
 			<a href="<?php echo the_field('link1'); ?>" class="popup-link">
 	      <span class="video_text">Смотреть<br> видео</span>
 	      <span class="video_btn"></span>
