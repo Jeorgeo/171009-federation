@@ -91,7 +91,7 @@ for (var k = 0; k < w; k++) {
      }
      popup.classList.add("modal-content-show");
      winPopup.classList.add("modal-content-show");
-     videoBox = '<video class="popup__video" autoplay controls><source src="' + videoLink[y].href + '" type="video/mp4"><source src="' + videoLink[y].href + '"type="video/webm"></video>';
+     videoBox = '<video class="popup__video" autoplay="true" controls="true"><source src="' + videoLink[y].href + '" type="video/mp4"><source src="' + videoLink[y].href + '"type="video/webm"></video>';
      popup.insertAdjacentHTML('afterbegin', videoBox);
    } else {
       evt.preventDefault();

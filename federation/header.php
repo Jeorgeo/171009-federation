@@ -19,7 +19,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<?php wp_head(); ?>
-	<script src="<?php bloginfo('template_url'); ?>/js/modernizr-1.0.min.js"></script>
 </head>
 
 <body <?php body_class(); ?>>

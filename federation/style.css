@@ -429,7 +429,8 @@ header .contacts-box .phone_text {
   color: #ffffff;
 }
 
-.bottom-header .header_p {
+.middle-header p.header_p,
+.bottom-header p.header_p {
 position: absolute;
 display: block;
 width: 100%;
