@@ -252,3 +252,8 @@ if ( defined( 'JETPACK__VERSION' ) ) {
  * Load TGM files
  */
 require get_template_directory() . '/tgm/tgm-files.php';
+
+/**
+ * Load TGM files
+ */
+require get_template_directory() . '/inc/order-form.php';

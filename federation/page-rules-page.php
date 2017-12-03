@@ -133,7 +133,7 @@ get_header(); ?>
 					</div>
 				</div>
 				<div class="cols col-6 col-6-md wrap-box">
-					<img src="<?php bloginfo('template_url'); ?>/pics/fed_ruls-img-1.png" alt="">
+					<img src="<?php echo the_field('image_f'); ?>">
 				</div>
 
 			</div>
