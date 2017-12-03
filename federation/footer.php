@@ -20,7 +20,7 @@
 			<div class="contacts-box">
 				<?php dynamic_sidebar( 'mail' ); ?>
 			</div>
-			<a class="policy" href="<?php echo the_field('policy'); ?>" target="_blank">Политика конфиденциальности</a>
+			<?php dynamic_sidebar( 'policy' ); ?>
 		</div>
 		<div class="footer-center">
 			<div class="box-social">
