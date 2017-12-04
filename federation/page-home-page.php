@@ -108,7 +108,7 @@
         <?php echo the_field('pole2'); ?>
       </div>
       <div class="cols col-4 col-6-md">
-        <img src="<?php bloginfo('template_url'); ?>/pics/fed_main-game.jpg" alt="Игра «Федерация»">
+        <img src="<?php echo the_field('image2'); ?>" alt="Игра «Федерация»">
       </div>
     </div>
   </section>

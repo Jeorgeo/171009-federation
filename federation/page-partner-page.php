@@ -52,13 +52,14 @@ get_header(); ?>
 				</div>
 				<div class="cols col-5 col-6-md">
 					<div class="box-form">
-						<form class="main-form" action="index.html" method="post">
+						<form class="main-form" method="post">
 							<h4>
 								Оставить заявку
 							</h4>
 							<!-- Hidden Required Fields -->
 							<input type="hidden" name="project_name" value="рф-игра.рф">
-							<input type="hidden" name="admin_email" value="rf-igra@mail.ru">
+							<?php dynamic_sidebar( 'mail_form' ); ?>
+							<!--<input type="hidden" name="admin_email" value="rf-igra@mail.ru"> -->
 							<input type="hidden" name="form_subject" value="Заявка в партнеры">
 							<!-- END Hidden Required Fields -->
 							<input type="text" name="name" value="" placeholder="ФИО*" required>
