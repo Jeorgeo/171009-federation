@@ -1389,6 +1389,18 @@ footer .social_tel {
     margin-bottom: 1em;
   }
 
+  .rules-order .row{
+    position: relative;
+  }
+
+  .rules-order .cols.col-6:last-child {
+    position: absolute;
+    z-index: -1;
+    width: 70%;
+    left: 34%;
+    top: 78px;
+  }
+
 /*--------------------------------------------------------------
   # Footer 768px
 --------------------------------------------------------------*/
@@ -1841,6 +1853,19 @@ footer .social_tel {
   .partner-order {
     margin: 4em 0;
     padding-bottom: 6em;
+  }
+
+  .rules-order .cols.col-6:last-child {
+    position: relative;
+    z-index: 1;
+    width: 50%;
+    left: 0;
+    top: 0;
+  }
+
+  .rules-order img {
+    max-width: 100%;
+    margin-top: 2em;
   }
 
   /*--------------------------------------------------------------
