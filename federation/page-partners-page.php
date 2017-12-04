@@ -61,14 +61,12 @@ $news = get_posts(
 
 
 			</div>
-			<a class="btn-rules btn-partners" href="<?php echo the_field('link1'); ?>">Стать партнером</a>
+			<a class="btn-rules btn-partners" href="<?php echo the_field('link-partner'); ?>">Стать партнером</a>
 		</div>
 	</section>
 	<section class="partners-map">
 		<div class="container">
-			<h2>
-				Карта
-			</h2>
+
 			<div class="map-box clearfix">
 				<?php echo the_field('map'); ?>
 			</div>

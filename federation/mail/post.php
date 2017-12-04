@@ -3,7 +3,11 @@
 
 header("Content-Type: text/html; charset=utf-8");
 
-$adminemail="jeorgeo@list.ru";  // e-mail админа
+$adminemail=$_POST['admin_email'];  // e-mail админа
+
+$project_name=$_POST['project_name'];  // e-mail админа
+
+$form_subject=$_POST['form_subject'];  // e-mail админа
 
 
 $date=date("d.m.y"); // число.месяц.год
@@ -20,7 +24,7 @@ $backurl="http://рф-игра.рф";  // На какую страничку п�
 
 $name=$_POST['name'];
 
-$email=$_POST['mail'];
+$email=$_POST['email'];
 
 $phone=$_POST['phone'];
 
@@ -60,11 +64,17 @@ $msg="
 
 ";
 
+$user_message = "<p>Ваша заявка принята и находится на рассмотрении.</p>
+<p>В ближайшее время мы с вами свяжемся. Будьте на связи!</p>
+
+<p>Федерация - играй в свою Страну!</p>";
 
 
  // Отправляем письмо админу
 
-mail("$adminemail", "$date $time Сообщение от $name", "$msg");
+mail("$adminemail", "$date $time Сообщение от $project_name", "$msg");
+
+mail("$email", "$date $time Сообщение от $project_name", "$user_message");
 
 
 

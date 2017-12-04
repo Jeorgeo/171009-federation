@@ -52,13 +52,13 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 --------------------------------------------------------------*/
 
 @keyframes show-panel {
-  from { top: -200px; }
+  from { top: -310px; }
   to   { top: 0; }
 }
 
 @keyframes hidden-panel {
   from { top: 0; }
-  to   { top: -200px; }
+  to   { top: -310px; }
 }
 
 @keyframes show-span {
@@ -114,13 +114,17 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 }
 
 @keyframes swell-r {
-  from { width: 85%; }
-  to   { width: 100%; }
+  from { width: 16%;
+         height: 16%;}
+  to   { width: 15%;
+         height: 15%;}
 }
 
 @keyframes deflate-r {
-  from { width: 100%; }
-  to   { width: 85%; }
+  from { width: 15%;
+         height: 15%;}
+  to   { width: 16%;
+         height: 16%;}
 }
 
 @keyframes rotate-up1 {
@@ -174,6 +178,11 @@ ul {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+.this_link a {
+  text-decoration: underline;
+  color: #3a75c4;
 }
 
 img {
@@ -358,8 +367,10 @@ main.main {
 }
 
 .menu li {
-  font-size: 0.9em;
+  font-size: 0.95em;
   text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2px;
 }
 
 .menu a:hover,
@@ -377,7 +388,7 @@ header .contacts-box a:hover .phone_text,
 
 header .contacts-box {
   position: absolute;
-  top: 7px;
+  top: 6px;
   right: 0;
 }
 
@@ -385,7 +396,8 @@ header .contacts-box .phone_icon {
   display: block;
   width: 30px;
   height: 30px;
-  background: url('img/spritesheet.png') no-repeat -205px -60px;
+  background: url('img/fed_main-icon-phone.png') no-repeat 50% 50%;
+  background-size: contain;
 }
 
 header .contacts-box .phone_text {
@@ -417,6 +429,16 @@ header .contacts-box .phone_text {
   color: #ffffff;
 }
 
+.middle-header p.header_p,
+.bottom-header p.header_p {
+position: absolute;
+display: block;
+width: 100%;
+text-align: center;
+text-transform: uppercase;
+font-size: 1.4em;
+}
+
 .bottom-header a {
   outline: none;
 }
@@ -442,7 +464,7 @@ a:hover .btn-play,
   width: 60px;
   height: 60px;
   background: url('img/fed_main-btn-video1.png') no-repeat 50% 50%;
-  background-size: contain;
+  background-size: cover;
 }
 
 .follow_button {
@@ -481,9 +503,14 @@ a:hover .btn-play,
   width: 100%;
   animation-name: show-header;
   top: 0;
+  left: 0;
   animation-duration: 1s;
   background: linear-gradient(to bottom, rgba(58, 117, 196, 1), rgba(17, 146, 208, 1));
   box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.35);
+}
+
+.top-header .container {
+  position: relative;
 }
 
 .header__video-wrapp {
@@ -495,24 +522,29 @@ a:hover .btn-play,
   overflow: hidden;
 }
 
-.header__video-wrapp::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: block;
-  width: 100%;
-  height: 100%;
-  content: '';
-  background: rgba(0, 0, 0, 0.35);
-}
-
 .wp-video video {
   max-width: 100%;
 }
 
 .header__video-wrapp video {
+  position: relative;
+  z-index: 97;
+  right: 160px;
   display: block;
   height: 380px;
+
+}
+
+.header__video-wrapp::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 98;
+  display: block;
+  width: 100%;
+  height: 100%;
+  content: '';
+  background: rgba(0, 0, 0, 0.35);
 }
 
 .cols.form-col {
@@ -539,7 +571,7 @@ a:hover .btn-play,
   background-color: #3a75c4;
   animation-name:hidden-panel;
   animation-duration: 0.8s;
-  top: -200px;
+  top: -310px;
   box-shadow: 0 0 7px 3px rgba(0, 0, 0, 0.35);
 }
 
@@ -641,7 +673,7 @@ a:hover .btn-play,
 }
 
 .mobile-menu li {
-  margin: 0.5em;
+  margin: 2em 0.5em;
 }
 
 @media screen and (min-width: 1024px) {
@@ -669,8 +701,10 @@ a:hover .btn-play,
 h2,
 .main h4,
 .rules .main-form h4,
-.partner .main-form h4  {
+.partner .main-form h4,
+.order .main-form h4 {
   text-transform: uppercase;
+  text-align: center;
   font-size: 32px;
   font-weight: bold;
   font-family: 'PT Sans', 'Arial', sans-serif;
@@ -732,7 +766,7 @@ footer .box-social .social-icons {
   display: inline-block;
   width: 46px;
   height: 46px;
-  margin: 0 10px;
+  margin: 0 4px;
   font-size: 0;
 }
 
@@ -793,7 +827,7 @@ footer .box-social .social-icons a {
   font-family: 'Arial', serif;
   font-size: 150px;
   font-weight: bold;
-  opacity: 0.1;
+  opacity: 0.2;
   color: #3976c4;
 }
 
@@ -827,11 +861,20 @@ footer .box-social .social-icons a {
   top: 42%;
   left: 40%;
   display: block;
+  animation-name: swell-r;
+  animation-duration: 0.5s;
   width: 15%;
   height: 15%;
   font-size: 0;
   background: url('img/fed_main-btn-video2.png') no-repeat 50% 50%;
   background-size: contain;
+}
+
+a:hover .btn-play {
+  animation-name: deflate-r;
+  animation-duration: 0.5s;
+  width: 16%;
+  height: 16%;
 }
 
 .box-meet {
@@ -906,6 +949,27 @@ footer .box-social .social-icons a {
   color: #ffffff;
   background-color: #ff4040;
   border: 1px solid #908f94;
+}
+
+.order .btn-partners {
+  width: 80%;
+  max-width: 360px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #3a75c4;
+  background-color: transparent;
+  border: 2px solid #3a75c4;
+}
+
+.order .btn-partners:hover {
+  color: #ffffff;
+  background-color: #3a75c4;
+}
+
+.order .strong-text {
+  width: 90%;
+  margin: auto;
+  font-size: 1.5em;
 }
 
 .partner .box-form button {
@@ -1068,6 +1132,11 @@ footer .box-social .social-icons a {
   min-height: 150px;
 }
 
+.wp-center {
+  width: 90%;
+  margin: auto;
+}
+
 /*----------slider--------------------*/
 
 .main-slider {
@@ -1123,7 +1192,7 @@ footer .box-social .social-icons a {
 
 .slick-arrow.slick-prev {
   position: absolute;
-  z-index: 9999;
+  z-index: 99;
   left: 30%;
   transform: rotate(-180deg);
 }
@@ -1154,6 +1223,129 @@ footer .box-social .social-icons a {
   box-shadow: 0 0 25px 5px #c4c4ca;;
 }
 
+/*--------------------------------------------------------------
+# Popup form
+--------------------------------------------------------------*/
+
+.wrap {
+  opacity: 0.8;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  padding: 16px;
+  background-color: rgba(35, 35, 35, 0.8);
+  z-index: 9999;
+  overflow: auto;
+  opacity: 0;
+  display: none;
+}
+
+.popup-question {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 50px;
+  z-index: 99999;
+  width: 300px;
+  min-height: 300px;
+  margin: 5px auto;
+  padding: 1em;
+  font-size: 1.2em;
+  text-align: center;
+	border-radius: 5px;
+  color: #000000;
+  background-color: rgba(255, 255, 255, 0.8);
+  opacity: 0;
+  display: none;
+}
+
+.popup-question-close {
+	position: absolute;
+	top: 0;
+	right: 0;
+  z-index: 9999;
+	display: block;
+	margin: 0;
+	padding: 0;
+  width: 30px;
+	height: 30px;
+	font-size: 0;
+  animation-name: prerotate-up1;
+  animation-duration: 0.5s;
+}
+
+.popup-question-close::after,
+.popup-question-close::before {
+  position: absolute;
+  top: 13px;
+  left: 5px;
+  width: 20px;
+  height: 1px;
+  background-color: #000000;
+  transform: rotate(45deg);
+  content: '';
+}
+
+.popup-question-close::before {
+  transform: rotate(-45deg);
+}
+
+.popup-question-close:hover {
+  cursor: pointer;
+  animation-name: rotate-up1;
+  animation-duration: 0.3s;
+  transform: rotate(-180deg);
+}
+
+.modal-content-show {
+  display: block;
+  animation-name: show-popup;
+  animation-duration: 0.5s;
+  opacity: 1;
+}
+
+.modal-content-hide {
+  animation-name: hide-popup;
+  animation-duration: 0.4s;
+  opacity: 0;
+}
+
+.video-box.popup-question {
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin: auto;
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+}
+
+.popup__video {
+  display: block;
+  max-width: 100%;
+  margin: auto;
+}
+
+.video-box .popup-question-close::after,
+.video-box .popup-question-close::before {
+  background-color: #ffd09c;
+}
+
+.main-order .btn-rules {
+  width: 300px;
+}
+
+.main-order h1,
+.main-order p {
+  font-size: 2em;
+}
+
+.order .strong-text a:hover {
+  color: #3a75c4;
+}
+
 
 /*--------------------------------------------------------------
 # Footer
@@ -1177,13 +1369,15 @@ footer .contacts-box .mail_icon {
   width: 30px;
   height: 30px;
   margin-top: 0.1em;
-  background: url('img/spritesheet.png') no-repeat -205px -57px;
+  background: url('img/fed_main-icon-phone.png') no-repeat 50% 50%;
+}
 
+footer .contacts-box .phone_icon {
+  background-size: contain;
 }
 
 footer .contacts-box .mail_icon {
   background: url('img/spritesheet.png') no-repeat -172px -53px;
-
 }
 
 footer .contacts-box .phone_text,
@@ -1313,9 +1507,44 @@ footer .social_tel {
     padding-bottom: 3em;
   }
 
+  .order .container,
   .main-order .container {
-    background: url('img/fed_main-bg-form.png') no-repeat 50% 100%;
+    position: relative;
+    z-index: 111;
+  }
+
+  .order .container::before,
+  .main-order .container::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    display: block;
+    width: 100%;
+    height: 100%;
+    content: '';
+    opacity: 0.5;
+  }
+
+  .main-order .container::before,
+  .order .container::before {
+    background: url('img/fed_main-bg-form.png') no-repeat 50% 33%;
     background-size: contain;
+  }
+
+  .main-order .container div {
+  /*  background-color: rgba(255, 255, 255, 0.5);*/
+    min-height: 350px;
+  }
+
+  .main-order .container .btn-rules {
+    background-color: #ffffff;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  .main-order .container .btn-rules:hover {
+    background-color: #3b76c4;
   }
 
   .main-order .box-meet {
@@ -1458,7 +1687,9 @@ footer .social_tel {
   }
 
   .middle-header {
-    margin: 9em 0;
+    margin: 0;
+    margin-top: 0;
+    margin-bottom: 18em;
   }
 
   .middle-header h1,
@@ -1484,7 +1715,7 @@ footer .social_tel {
   }
 
   .main-menu li {
-    margin: 1.7em 0.5em;
+    margin: 1.5em 0.5em;
   }
 
   header .contacts-box {
@@ -1501,7 +1732,7 @@ footer .social_tel {
     display: block;
     color: #ffd09c;
     font-weight: bold;
-    font-size: 1.1em;
+    font-size: 0.95em;
     margin: -1px 0;
   }
 
@@ -1631,7 +1862,8 @@ footer .social_tel {
   }
 
   .main-order .col-5,
-  .partner-order .col-5 {
+  .partner-order .col-5,
+  .order .col-5 {
     margin-right: 8.33%;
   }
 
@@ -1768,6 +2000,19 @@ footer .social_tel {
     width: 100%;
   }
 
+  .order {
+    background: url
+  }
+
+  .order .box-meet {
+    background: none;
+  }
+
+  .order .box-meet .big-text {
+    font-size: 1.3em;
+    text-transform: uppercase;
+  }
+
   /*--------------------------------------------------------------
     # Footer 1024px
   --------------------------------------------------------------*/
@@ -1806,6 +2051,15 @@ footer .social_tel {
     margin-left: 2em;
   }
 
+  .header__video-wrapp video {
+    right: 0;
+  }
+
+  .header__video-wrapp {
+    left: -7%;
+    width: 108%;
+  }
+
   /*--------------------------------------------------------------
     # Content 1280px
   --------------------------------------------------------------*/
@@ -1829,12 +2083,12 @@ footer .social_tel {
   .slick-slide.slick-center img {
     position: absolute;
     width: 480px;
-    margin-top: -27px;
+    margin-top: -4px;
     margin-left: -50px;
     animation-name: swell;
     animation-name: show-popup;
     animation-duration: 0.5s;
-    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.25);
   }
 
   .meet-social {
@@ -1855,6 +2109,18 @@ footer .social_tel {
     padding-bottom: 6em;
   }
 
+<<<<<<< HEAD
+  .main-order .container div {
+    min-height: 450px;
+  }
+
+  .main-order h1, .main-order p {
+    font-size: 3em;
+  }
+
+  .popup__video {
+    max-width: 80%;
+=======
   .rules-order .cols.col-6:last-child {
     position: relative;
     z-index: 1;
@@ -1866,6 +2132,7 @@ footer .social_tel {
   .rules-order img {
     max-width: 100%;
     margin-top: 2em;
+>>>>>>> refs/remotes/origin/master
   }
 
   /*--------------------------------------------------------------
@@ -1884,6 +2151,11 @@ footer .social_tel {
     height: auto;
   }
 
+  .header__video-wrapp {
+    left: 0;
+    width: 100%;
+  }
+
   /*--------------------------------------------------------------
     # Content 1360px
   --------------------------------------------------------------*/
@@ -1891,6 +2163,10 @@ footer .social_tel {
   .slick-arrow.slick-prev,
   .slick-arrow.slick-next {
     top: 165px;
+  }
+
+  .video-box.popup-question {
+    padding: 30px;
   }
 
   /*--------------------------------------------------------------
@@ -1929,109 +2205,7 @@ footer .social_tel {
   }
 }
 
-/*--------------------------------------------------------------
-# Popup form
---------------------------------------------------------------*/
-
-.wrap {
-  opacity: 0.8;
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  padding: 16px;
-  background-color: rgba(35, 35, 35, 0.8);
-  z-index: 9999;
-  overflow: auto;
-  opacity: 0;
-  display: none;
-}
-
-.popup-question {
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 50px;
-  bottom: 0;
-  z-index: 99999;
-  width: 300px;
-  min-height: 150px;
-  margin: 5px auto;
-  padding: 1em;
-  font-size: 1.2em;
-  text-align: center;
-	border-radius: 5px;
-  color: #000000;
-  background-color: rgba(255, 255, 255, 0.8);
-  opacity: 0;
-  display: none;
-}
-
-.popup-question-close {
-	position: absolute;
-	top: 0;
-	right: 0;
-  z-index: 9999;
-	display: block;
-	margin: 0;
-	padding: 0;
-  width: 30px;
-	height: 30px;
-	font-size: 0;
-  animation-name: prerotate-up1;
-  animation-duration: 0.5s;
-}
-
-.popup-question-close::after,
-.popup-question-close::before {
-  position: absolute;
-  top: 13px;
-  left: 5px;
-  width: 20px;
-  height: 1px;
-  background-color: #000000;
-  transform: rotate(45deg);
-  content: '';
-}
-
-.popup-question-close::before {
-  transform: rotate(-45deg);
-}
-
-.popup-question-close:hover {
-  cursor: pointer;
-  animation-name: rotate-up1;
-  animation-duration: 0.3s;
-  transform: rotate(-180deg);
-}
-
-.modal-content-show {
-  display: block;
-  animation-name: show-popup;
-  animation-duration: 0.5s;
-  opacity: 1;
-}
-
-.modal-content-hide {
-  animation-name: hide-popup;
-  animation-duration: 0.4s;
-  opacity: 0;
-}
-
-.popup-box {
-  position: fixed;
-  top: 10px;
-  left: 5%;
-  display: none;
-  width: 90%;
-  padding: 10px;
-  box-sizing: border-box;
-  background-color: #fafafa;
-}
-
-.popup-box .popup__video {
-  display: block;
-  max-width: 100%;
-  height: auto;
+#follow-box {
+  position: relative;
+  z-index: 99;
 }

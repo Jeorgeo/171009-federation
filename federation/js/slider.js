@@ -70,6 +70,34 @@ function moveMenu(){
 var popup = document.querySelector(".popup-question")
 var close = document.querySelector(".popup-question-close");
 var winPopup = document.querySelector(".wrap");
+var videoLink = document.querySelectorAll(".popup-link");
+var i = 0;
+var k = 0;
+var x = 0;
+var y = 0;
+var w = videoLink.length;
+
+for (var k = 0; k < w; k++) {
+  videoLink[k].addEventListener('click', function(evt) {
+     evt.preventDefault();
+     var current = evt.currentTarget;
+     if (current.classList.contains("popup-link")) {
+     var m = w;
+     while(m--) {
+        if(videoLink[m] == current) {
+           var y = m;
+           break;
+        }
+     }
+     popup.classList.add("modal-content-show");
+     winPopup.classList.add("modal-content-show");
+     videoBox = '<video class="popup__video" autoplay="true" controls="true"><source src="' + videoLink[y].href + '" type="video/mp4"><source src="' + videoLink[y].href + '"type="video/webm"></video>';
+     popup.insertAdjacentHTML('afterbegin', videoBox);
+   } else {
+      evt.preventDefault();
+     }
+  });
+};
 
 function showThank() {
   winPopup.classList.add("modal-content-show");
@@ -98,6 +126,12 @@ function removePopup() {
 
 };
 
+function removeVideo() {
+  var videoScreen = popup.querySelector("video");
+  var removeScreen = videoScreen.querySelector("source");
+  removeScreen.src = "#";
+  popup.removeChild(videoScreen);
+}
 
 
   close.addEventListener("click", function(event) {
@@ -105,6 +139,8 @@ function removePopup() {
     event.preventDefault();
 
     removePopup();
+
+    removeVideo()
 
   });
 
@@ -116,6 +152,8 @@ window.addEventListener("keydown", function(event) {
     if (popup.classList.contains("modal-content-show")) {
 
       removePopup();
+
+      removeVideo()
 
     }
 
@@ -129,6 +167,8 @@ winPopup.addEventListener("click", function(event) {
 
     removePopup();
 
+    removeVideo()
+
   }
 
 });
@@ -136,16 +176,20 @@ winPopup.addEventListener("click", function(event) {
 $(document).ready(function() {
 
 	//E-mail Ajax Send
-	$(".main-form").submit(function() { //Change
-		var th = $(this).serialize();
+	/*$(".main-form").submit(function() { //Change
+		var th = $(this);
 		$.ajax({
 			type: "POST",
-			url: "http://рф-игра.рф/post.php", //Change
-			data: th,
+			url: "https://рф-игра.рф/mail.php", //Change
+			data: th.serialize()
 		}).done(function() {
 			showThank();
+      setTimeout(function() {
+        // Done Functions
+        th.trigger("reset");
+      }, 1000);
 		});
 		return false;
-	});
+	});*/
 
 });

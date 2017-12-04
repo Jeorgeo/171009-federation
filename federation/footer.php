@@ -39,14 +39,15 @@
 		</p>
 	</div>
 </footer>
-<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery-3.2.0.min.js"></script>
+	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery-migrate-1.4.1.min.js"></script>
   <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
   <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/slick/slick.min.js"></script>
 	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/maskedinput.js"></script>
 	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/slider.js"></script>
 	<script type="text/javascript">
    jQuery(function($){
-   $("#phone").mask("+7(999) 999-9999");
+   $("#phone").mask("79999999999");
    });
 	 </script>
 	 <script src="<?php bloginfo('template_url'); ?>/js/wow.min.js"></script>
