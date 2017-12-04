@@ -1618,6 +1618,18 @@ footer .social_tel {
     margin-bottom: 1em;
   }
 
+  .rules-order .row{
+    position: relative;
+  }
+
+  .rules-order .cols.col-6:last-child {
+    position: absolute;
+    z-index: -1;
+    width: 70%;
+    left: 34%;
+    top: 78px;
+  }
+
 /*--------------------------------------------------------------
   # Footer 768px
 --------------------------------------------------------------*/
@@ -2097,6 +2109,7 @@ footer .social_tel {
     padding-bottom: 6em;
   }
 
+<<<<<<< HEAD
   .main-order .container div {
     min-height: 450px;
   }
@@ -2107,6 +2120,19 @@ footer .social_tel {
 
   .popup__video {
     max-width: 80%;
+=======
+  .rules-order .cols.col-6:last-child {
+    position: relative;
+    z-index: 1;
+    width: 50%;
+    left: 0;
+    top: 0;
+  }
+
+  .rules-order img {
+    max-width: 100%;
+    margin-top: 2em;
+>>>>>>> refs/remotes/origin/master
   }
 
   /*--------------------------------------------------------------

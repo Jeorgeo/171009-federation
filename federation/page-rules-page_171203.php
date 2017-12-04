@@ -116,24 +116,10 @@ get_header(); ?>
 					<span class="big-text">
 						<?php echo the_field('order'); ?>
 					</span>
-					<div class="wow slideInLeft box-form">
-						<form class="main-form" action="index.html" method="post">
-							<h4>
-								Оформить заказ
-							</h4>
-							<input type="text" name="name" value="" placeholder="ФИО*">
-							<input id="phone" type="text" name="phone" value="" placeholder="Контактный телефон*">
-							<input type="text" name="email" value="" placeholder="E-mail*" pattern="^([A-Za-z0-9_\.\-]{1,20})@([a-z0-9\.\-]{1,20})\.([a-z]{2,4})">
-							<input type="text" name="adress" value="" placeholder="Адрес доставки*">
-							<span class="price">
-								Всего: 1690 руб.
-							</span>
-							<button class="box-form__btn"type="submit" name="order-btn">Перейти к оплате</button>
-						</form>
-					</div>
+					<?php echo get_order_form(array('wow','slideInLeft','box-form')); ?>
 				</div>
 				<div class="cols col-6 col-6-md wrap-box">
-					<img src="<?php echo the_field('image_f'); ?>">
+					<img src="<?php bloginfo('template_url'); ?>/pics/fed_ruls-img-1.png" alt="">
 				</div>
 
 			</div>
