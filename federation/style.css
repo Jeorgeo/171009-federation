@@ -2109,7 +2109,7 @@ footer .social_tel {
     padding-bottom: 6em;
   }
 
-<<<<<<< HEAD
+
   .main-order .container div {
     min-height: 450px;
   }
@@ -2120,7 +2120,8 @@ footer .social_tel {
 
   .popup__video {
     max-width: 80%;
-=======
+  }
+
   .rules-order .cols.col-6:last-child {
     position: relative;
     z-index: 1;
@@ -2132,7 +2133,6 @@ footer .social_tel {
   .rules-order img {
     max-width: 100%;
     margin-top: 2em;
->>>>>>> refs/remotes/origin/master
   }
 
   /*--------------------------------------------------------------
