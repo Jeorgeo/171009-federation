@@ -174,6 +174,15 @@ function federation_widgets_init() {
 		'after_title'   => '</h2>',
 	) );
 	register_sidebar( array(
+		'name'          => esc_html__( 'mail_form', 'federation' ),
+		'id'            => 'mail_form',
+		'description'   => esc_html__( 'Add widgets here.', 'federation' ),
+		'before_widget' => '<div>',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+	register_sidebar( array(
 		'name'          => esc_html__( 'thanks', 'federation' ),
 		'id'            => 'thanks',
 		'description'   => esc_html__( 'Add widgets here.', 'federation' ),
@@ -205,8 +214,6 @@ function federation_scripts() {
 	wp_enqueue_style( 'animate-style', get_template_directory_uri() . '/css/animate.css' );
 
 	wp_enqueue_style( 'federation-style', get_stylesheet_uri() );
-
-	wp_enqueue_script( 'federation-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'federation-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 

@@ -176,7 +176,7 @@ winPopup.addEventListener("click", function(event) {
 $(document).ready(function() {
 
 	//E-mail Ajax Send
-	/*$(".main-form").submit(function() { //Change
+	$(".partner-form").submit(function() { //Change
 		var th = $(this);
 		$.ajax({
 			type: "POST",
@@ -189,7 +189,12 @@ $(document).ready(function() {
         th.trigger("reset");
       }, 1000);
 		});
+    showThank();
+    setTimeout(function() {
+      // Done Functions
+      th.trigger("reset");
+    }, 1000);
 		return false;
-	});*/
+	});
 
 });

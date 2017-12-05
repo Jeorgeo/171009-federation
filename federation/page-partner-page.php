@@ -52,7 +52,7 @@ get_header(); ?>
 				</div>
 				<div class="cols col-5 col-6-md">
 					<div class="box-form">
-						<form class="main-form" method="post">
+						<form class="main-form partner-form" method="post">
 							<h4>
 								Оставить заявку
 							</h4>
